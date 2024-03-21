@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-21T14:48:45.561461" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo" source="C:\Users\tt179\Desktop\Graduation_thesis\truc\Demo.robot">
+<test id="s1-t1" name="Search the ball" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-03-21T14:48:45.780277" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
+<arg>${URLMain}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T14:48:45.780277" elapsed="5.549838"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:48:51.336340" level="INFO">Typing text 'ball' into text field 'class=instasearch-term'.</msg>
+<arg>${INPUTTag}</arg>
+<arg>ball</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T14:48:51.334465" elapsed="0.172595"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:48:51.508081" level="INFO">Clicking element 'class=instasearch-button'.</msg>
+<arg>class=instasearch-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T14:48:51.508081" elapsed="0.567670"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:48:52.682574" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-21T14:48:52.682574" level="FAIL">Page should have contained text 'Search result for ball' but did not.</msg>
+<arg>Search result for ball</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2024-03-21T14:48:52.075751" elapsed="0.611437">Page should have contained text 'Search result for ball' but did not.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-03-21T14:48:52.688193" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-03-21T14:48:45.780277" elapsed="6.907916">Page should have contained text 'Search result for ball' but did not.</status>
+</test>
+<test id="s1-t2" name="Log in not success" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-03-21T14:48:52.690430" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
+<arg>${URLMain}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T14:48:52.690430" elapsed="5.894815"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:48:58.585245" level="INFO">Clicking element 'class=fa-user-circle'.</msg>
+<arg>class=fa-user-circle</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T14:48:58.585245" elapsed="0.902279"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:48:59.488521" level="INFO">Typing text '@trantruc2001' into text field 'id=UsernameOrEmail'.</msg>
+<arg>id=UsernameOrEmail</arg>
+<arg>@trantruc2001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T14:48:59.487524" elapsed="0.185441"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:48:59.672965" level="INFO">Typing password into text field 'id=Password'.</msg>
+<msg time="2024-03-21T14:48:59.706303" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=Password</arg>
+<arg>TranPhuongNgocTruc200420011</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T14:48:59.672965" elapsed="0.117337"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:48:59.791664" level="INFO">Clicking element 'class=btn-login'.</msg>
+<arg>class=btn-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T14:48:59.791664" elapsed="0.595044"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:49:00.408228" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<arg>Login was unsuccessful. Please correct the errors and try again.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-03-21T14:49:00.387845" elapsed="0.020383"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-21T14:49:00.408886" elapsed="2.329659"/>
+</kw>
+<status status="PASS" start="2024-03-21T14:48:52.689397" elapsed="10.049148"/>
+</test>
+<test id="s1-t3" name="Log in success" line="22">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-03-21T14:49:02.738545" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
+<arg>${URLMain}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T14:49:02.738545" elapsed="6.586431"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:49:09.325731" level="INFO">Clicking element 'class=fa-user-circle'.</msg>
+<arg>class=fa-user-circle</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T14:49:09.325731" elapsed="0.916189"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:49:10.243994" level="INFO">Typing text '@trantruc2001' into text field 'id=UsernameOrEmail'.</msg>
+<arg>id=UsernameOrEmail</arg>
+<arg>@trantruc2001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T14:49:10.242916" elapsed="0.153458"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:49:10.396374" level="INFO">Typing password into text field 'id=Password'.</msg>
+<msg time="2024-03-21T14:49:10.420501" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=Password</arg>
+<arg>TranPhuongNgocTruc20042001</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T14:49:10.396374" elapsed="0.086470"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:49:10.482844" level="INFO">Clicking element 'class=btn-login'.</msg>
+<arg>class=btn-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T14:49:10.482844" elapsed="0.922207"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-21T14:49:11.434002" level="INFO">Current page contains text 'Welcome to our store.'.</msg>
+<arg>Welcome to our store.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-03-21T14:49:11.406048" elapsed="0.027954"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-21T14:49:11.434801" elapsed="2.307257"/>
+</kw>
+<status status="PASS" start="2024-03-21T14:49:02.738545" elapsed="11.003513"/>
+</test>
+<status status="FAIL" start="2024-03-21T14:48:45.575276" elapsed="28.166782"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Demo">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
