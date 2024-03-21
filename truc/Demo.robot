@@ -5,7 +5,7 @@ Test Setup    Open Browser    ${URLMain}    chrome
 *** Variables ***
 # ${URLLogin}    https://bearstore-testsite.smartbear.com/login?returnUrl=%2F
 ${URLMain}    https://bearstore-testsite.smartbear.com/
-${INPUTTag}    class=instasearch-term
+${INPUTTag}    css:.instasearch-term
 *** Test Cases ***
 Search the ball
     Input Text    ${INPUTTag}    ball 
