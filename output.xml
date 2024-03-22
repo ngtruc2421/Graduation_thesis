@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-22T12:00:56.151676" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo" source="c:\Users\tt179\Desktop\Graduation_thesis\truc\Demo.robot">
+<test id="s1-t1" name="Search the ball" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-03-22T12:00:56.724332" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
+<arg>${URLMain}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-22T12:00:56.724332" elapsed="9.318476"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-22T12:01:25.971370" level="INFO">Typing text 'ball' into text field 'css:.instasearch-term'.</msg>
+<arg>${INPUTTag}</arg>
+<arg>ball</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T12:01:06.046971" elapsed="20.128270"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-22T12:01:27.857310" level="INFO">Clicking element 'class=instasearch-button'.</msg>
+<arg>class=instasearch-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T12:01:26.187949" elapsed="2.801033"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-22T12:01:30.992398" level="INFO">Current page contains text 'Search result for ball'.</msg>
+<arg>Search result for ball</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-03-22T12:01:28.988982" elapsed="2.003416"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-22T12:01:30.994456" elapsed="4.190062"/>
+</kw>
+<status status="PASS" start="2024-03-22T12:00:56.724332" elapsed="38.461190"/>
+</test>
+<status status="PASS" start="2024-03-22T12:00:56.168272" elapsed="39.018912"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
