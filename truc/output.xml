@@ -1,140 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-22T11:59:58.918089" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-22T17:52:50.437223" rpa="false" schemaversion="5">
 <suite id="s1" name="Demo" source="C:\Users\tt179\Desktop\Graduation_thesis\truc\Demo.robot">
-<test id="s1-t1" name="Search the ball" line="10">
+<test id="s1-t1" name="Search the ball" line="14">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-03-22T11:59:59.070369" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
+<msg time="2024-03-22T17:52:50.584753" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
 <arg>${URLMain}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-22T11:59:59.070369" elapsed="7.471046"/>
+<status status="PASS" start="2024-03-22T17:52:50.584753" elapsed="11.835090"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:06.545429" level="INFO">Typing text 'ball' into text field 'css:.instasearch-term'.</msg>
+<msg time="2024-03-22T17:53:02.421849" level="INFO">Typing text 'ball' into text field 'css:.instasearch-term'.</msg>
 <arg>${INPUTTag}</arg>
 <arg>ball</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T12:00:06.545429" elapsed="0.125330"/>
+<status status="PASS" start="2024-03-22T17:53:02.420843" elapsed="0.186758"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:06.672144" level="INFO">Clicking element 'class=instasearch-button'.</msg>
+<msg time="2024-03-22T17:53:02.608601" level="INFO">Clicking element 'class=instasearch-button'.</msg>
 <arg>class=instasearch-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T12:00:06.671771" elapsed="1.160394"/>
+<status status="PASS" start="2024-03-22T17:53:02.608601" elapsed="1.333581"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:07.855870" level="INFO">Current page contains text 'Search result for ball'.</msg>
+<msg time="2024-03-22T17:53:03.968948" level="INFO">Current page contains text 'Search result for ball'.</msg>
 <arg>Search result for ball</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-03-22T12:00:07.832165" elapsed="0.024904"/>
+<status status="PASS" start="2024-03-22T17:53:03.943188" elapsed="0.025760"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-22T12:00:07.857069" elapsed="2.398407"/>
-</kw>
-<status status="PASS" start="2024-03-22T11:59:59.070369" elapsed="11.185107"/>
+<tag>Medium</tag>
+<status status="PASS" start="2024-03-22T17:52:50.583344" elapsed="13.386604"/>
 </test>
-<test id="s1-t2" name="Log in not success" line="15">
+<test id="s1-t2" name="Log in not success" line="20">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-03-22T12:00:10.271108" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
+<msg time="2024-03-22T17:53:03.972948" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
 <arg>${URLMain}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-22T12:00:10.255476" elapsed="11.315587"/>
+<status status="PASS" start="2024-03-22T17:53:03.971949" elapsed="4.858406"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:21.571063" level="INFO">Clicking element 'class=fa-user-circle'.</msg>
+<msg time="2024-03-22T17:53:08.831356" level="INFO">Clicking element 'class=fa-user-circle'.</msg>
 <arg>class=fa-user-circle</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T12:00:21.571063" elapsed="0.807092"/>
+<status status="PASS" start="2024-03-22T17:53:08.831356" elapsed="0.684085"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:22.379155" level="INFO">Typing text '@trantruc2001' into text field 'id=UsernameOrEmail'.</msg>
+<msg time="2024-03-22T17:53:09.516442" level="INFO">Typing text '@trantruc2001' into text field 'id=UsernameOrEmail'.</msg>
 <arg>id=UsernameOrEmail</arg>
 <arg>@trantruc2001</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T12:00:22.379155" elapsed="0.171050"/>
+<status status="PASS" start="2024-03-22T17:53:09.516442" elapsed="0.206200"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:22.550205" level="INFO">Typing password into text field 'id=Password'.</msg>
-<msg time="2024-03-22T12:00:22.575097" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-03-22T17:53:09.723643" level="INFO">Typing password into text field 'id=Password'.</msg>
+<msg time="2024-03-22T17:53:09.784766" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id=Password</arg>
 <arg>TranPhuongNgocTruc200420011</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T12:00:22.550205" elapsed="0.104158"/>
+<status status="PASS" start="2024-03-22T17:53:09.722642" elapsed="0.147176"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:22.654363" level="INFO">Clicking element 'class=btn-login'.</msg>
+<msg time="2024-03-22T17:53:09.872082" level="INFO">Clicking element 'class=btn-login'.</msg>
 <arg>class=btn-login</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T12:00:22.654363" elapsed="0.713240"/>
+<status status="PASS" start="2024-03-22T17:53:09.872082" elapsed="0.643976"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:23.379956" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<msg time="2024-03-22T17:53:10.535218" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
 <arg>Login was unsuccessful. Please correct the errors and try again.</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-03-22T12:00:23.368659" elapsed="0.011297"/>
+<status status="PASS" start="2024-03-22T17:53:10.516058" elapsed="0.019160"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-22T12:00:23.379956" elapsed="2.354169"/>
+<status status="PASS" start="2024-03-22T17:53:10.536217" elapsed="2.394593"/>
 </kw>
-<status status="PASS" start="2024-03-22T12:00:10.255476" elapsed="15.479993"/>
+<tag>Low</tag>
+<status status="PASS" start="2024-03-22T17:53:03.970948" elapsed="8.959862"/>
 </test>
-<test id="s1-t3" name="Log in success" line="22">
+<test id="s1-t3" name="Log in success" line="27">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-03-22T12:00:25.735469" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
+<msg time="2024-03-22T17:53:12.934810" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
 <arg>${URLMain}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-22T12:00:25.735469" elapsed="7.666055"/>
+<status status="PASS" start="2024-03-22T17:53:12.934810" elapsed="7.888727"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:33.402531" level="INFO">Clicking element 'class=fa-user-circle'.</msg>
+<msg time="2024-03-22T17:53:20.824537" level="INFO">Clicking element 'class=fa-user-circle'.</msg>
 <arg>class=fa-user-circle</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T12:00:33.402531" elapsed="0.767259"/>
+<status status="PASS" start="2024-03-22T17:53:20.823537" elapsed="0.908190"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:34.171231" level="INFO">Typing text '@trantruc2001' into text field 'id=UsernameOrEmail'.</msg>
+<msg time="2024-03-22T17:53:21.732733" level="INFO">Typing text '@trantruc2001' into text field 'id=UsernameOrEmail'.</msg>
 <arg>id=UsernameOrEmail</arg>
 <arg>@trantruc2001</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T12:00:34.169790" elapsed="0.135394"/>
+<status status="PASS" start="2024-03-22T17:53:21.732733" elapsed="0.192025"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:34.305184" level="INFO">Typing password into text field 'id=Password'.</msg>
-<msg time="2024-03-22T12:00:34.335337" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-03-22T17:53:21.925777" level="INFO">Typing password into text field 'id=Password'.</msg>
+<msg time="2024-03-22T17:53:21.993899" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id=Password</arg>
 <arg>TranPhuongNgocTruc20042001</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T12:00:34.305184" elapsed="0.087658"/>
+<status status="PASS" start="2024-03-22T17:53:21.925777" elapsed="0.220162"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:34.393831" level="INFO">Clicking element 'class=btn-login'.</msg>
+<msg time="2024-03-22T17:53:22.147445" level="INFO">Clicking element 'class=btn-login'.</msg>
 <arg>class=btn-login</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T12:00:34.393831" elapsed="1.076111"/>
+<status status="PASS" start="2024-03-22T17:53:22.145939" elapsed="1.386022"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-22T12:00:35.487779" level="INFO">Current page contains text 'Welcome to our store.'.</msg>
+<msg time="2024-03-22T17:53:23.559282" level="INFO">Current page contains text 'Welcome to our store.'.</msg>
 <arg>Welcome to our store.</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-03-22T12:00:35.470942" elapsed="0.016837"/>
+<status status="PASS" start="2024-03-22T17:53:23.532966" elapsed="0.026316"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-22T12:00:35.488481" elapsed="2.345785"/>
+<status status="PASS" start="2024-03-22T17:53:23.560292" elapsed="2.453063"/>
 </kw>
-<status status="PASS" start="2024-03-22T12:00:25.735469" elapsed="12.098797"/>
+<tag>High</tag>
+<status status="PASS" start="2024-03-22T17:53:12.932810" elapsed="13.081583"/>
 </test>
-<status status="PASS" start="2024-03-22T11:59:58.918089" elapsed="38.916177"/>
+<doc>This is my test documentation
+You can see. If you want write
+so long data. You can write this</doc>
+<status status="PASS" start="2024-03-22T17:52:50.438223" elapsed="35.578184"/>
 </suite>
 <statistics>
 <total>
 <stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">High</stat>
+<stat pass="1" fail="0" skip="0">Low</stat>
+<stat pass="1" fail="0" skip="0">Medium</stat>
 </tag>
 <suite>
 <stat pass="3" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
