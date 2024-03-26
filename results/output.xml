@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-19T22:11:21.861098" rpa="false" schemaversion="5">
+<suite id="s1" name="DATN" source="D:\DATN">
+<suite id="s1-s1" name="Test" source="D:\DATN\test.robot">
+<test id="s1-s1-t1" name="Example Test Case" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T22:11:22.332519" level="INFO">Opening browser 'Chrome' to base url 'http://example.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T22:11:22.331524" elapsed="6.835427"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T22:11:29.171936" elapsed="0.137629"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T22:11:29.311560" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<msg time="2024-03-19T22:11:29.630598" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-19T22:11:29.630598" level="FAIL">Element with locator 'name=q' not found.</msg>
+<arg>name=q</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-03-19T22:11:29.310597" elapsed="0.326034">Element with locator 'name=q' not found.</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>css:input[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-19T22:11:29.637545" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:h1</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-03-19T22:11:29.638542" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Welcome to example.com</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-03-19T22:11:29.639542" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-03-19T22:11:29.640540" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-03-19T22:11:29.641533" elapsed="0.000000"/>
+</kw>
+<doc>This is a simple test case example.</doc>
+<status status="FAIL" start="2024-03-19T22:11:22.329526" elapsed="7.313050">Element with locator 'name=q' not found.</status>
+</test>
+<status status="FAIL" start="2024-03-19T22:11:21.937423" elapsed="7.709101"/>
+</suite>
+<status status="FAIL" start="2024-03-19T22:11:21.888168" elapsed="7.762767"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="DATN">DATN</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">DATN.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
