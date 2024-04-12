@@ -1,148 +1,323 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-22T17:52:50.437223" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo" source="C:\Users\tt179\Desktop\Graduation_thesis\truc\Demo.robot">
-<test id="s1-t1" name="Search the ball" line="14">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-03-22T17:52:50.584753" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
-<arg>${URLMain}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-22T17:52:50.584753" elapsed="11.835090"/>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-02T16:13:53.932937" rpa="false" schemaversion="5">
+<suite id="s1" name="controlSTructure" source="C:\Users\truc.tran\Desktop\Graduation_thesis\truc\controlSTructure.robot">
+<test id="s1-t1" name="For loop example" line="6">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.120979" level="INFO">a</msg>
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.120979" elapsed="0.000000"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:02.421849" level="INFO">Typing text 'ball' into text field 'css:.instasearch-term'.</msg>
-<arg>${INPUTTag}</arg>
-<arg>ball</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T17:53:02.420843" elapsed="0.186758"/>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.121976" level="INFO">5</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.121976" elapsed="0.000000"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:02.608601" level="INFO">Clicking element 'class=instasearch-button'.</msg>
-<arg>class=instasearch-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T17:53:02.608601" elapsed="1.333581"/>
+<var name="${counter}">5</var>
+<status status="PASS" start="2024-04-02T16:13:54.121976" elapsed="0.000000"/>
+</iter>
+<var>${counter}</var>
+<value>5</value>
+<value>10</value>
+<value>20</value>
+<status status="PASS" start="2024-04-02T16:13:54.121976" elapsed="0.000000"/>
+</for>
+<var name="${element}">a</var>
+<status status="PASS" start="2024-04-02T16:13:54.120979" elapsed="0.000997"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.121976" level="INFO">b</msg>
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.121976" elapsed="0.000997"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:03.968948" level="INFO">Current page contains text 'Search result for ball'.</msg>
-<arg>Search result for ball</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-03-22T17:53:03.943188" elapsed="0.025760"/>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.122973" level="INFO">5</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.122973" elapsed="0.000000"/>
 </kw>
-<tag>Medium</tag>
-<status status="PASS" start="2024-03-22T17:52:50.583344" elapsed="13.386604"/>
+<var name="${counter}">5</var>
+<status status="PASS" start="2024-04-02T16:13:54.122973" elapsed="0.000000"/>
+</iter>
+<var>${counter}</var>
+<value>5</value>
+<value>10</value>
+<value>20</value>
+<status status="PASS" start="2024-04-02T16:13:54.122973" elapsed="0.000000"/>
+</for>
+<var name="${element}">b</var>
+<status status="PASS" start="2024-04-02T16:13:54.121976" elapsed="0.000997"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.122973" level="INFO">c</msg>
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.122973" elapsed="0.000000"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.123970" level="INFO">5</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.123970" elapsed="0.000000"/>
+</kw>
+<var name="${counter}">5</var>
+<status status="PASS" start="2024-04-02T16:13:54.123970" elapsed="0.000000"/>
+</iter>
+<var>${counter}</var>
+<value>5</value>
+<value>10</value>
+<value>20</value>
+<status status="PASS" start="2024-04-02T16:13:54.123970" elapsed="0.000000"/>
+</for>
+<var name="${element}">c</var>
+<status status="PASS" start="2024-04-02T16:13:54.122973" elapsed="0.000997"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.123970" level="INFO">d</msg>
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.123970" elapsed="0.000000"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.124968" level="INFO">5</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.124968" elapsed="0.000000"/>
+</kw>
+<var name="${counter}">5</var>
+<status status="PASS" start="2024-04-02T16:13:54.124968" elapsed="0.000000"/>
+</iter>
+<var>${counter}</var>
+<value>5</value>
+<value>10</value>
+<value>20</value>
+<status status="PASS" start="2024-04-02T16:13:54.123970" elapsed="0.000998"/>
+</for>
+<var name="${element}">d</var>
+<status status="PASS" start="2024-04-02T16:13:54.123970" elapsed="0.000998"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.124968" level="INFO">e</msg>
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.124968" elapsed="0.000000"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.125965" level="INFO">5</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.125965" elapsed="0.000000"/>
+</kw>
+<var name="${counter}">5</var>
+<status status="PASS" start="2024-04-02T16:13:54.125965" elapsed="0.000000"/>
+</iter>
+<var>${counter}</var>
+<value>5</value>
+<value>10</value>
+<value>20</value>
+<status status="PASS" start="2024-04-02T16:13:54.124968" elapsed="0.000997"/>
+</for>
+<var name="${element}">e</var>
+<status status="PASS" start="2024-04-02T16:13:54.124968" elapsed="0.000997"/>
+</iter>
+<var>${element}</var>
+<value>@{List}</value>
+<status status="PASS" start="2024-04-02T16:13:54.119978" elapsed="0.005987"/>
+</for>
+<status status="PASS" start="2024-04-02T16:13:54.119978" elapsed="0.007034"/>
 </test>
-<test id="s1-t2" name="Log in not success" line="20">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-03-22T17:53:03.972948" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
-<arg>${URLMain}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-22T17:53:03.971949" elapsed="4.858406"/>
+<test id="s1-t2" name="Manage index manually" line="18">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.129170" level="INFO">${index} = -1</msg>
+<var>${index}</var>
+<arg>-1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.129170" elapsed="0.000000"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:08.831356" level="INFO">Clicking element 'class=fa-user-circle'.</msg>
-<arg>class=fa-user-circle</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T17:53:08.831356" elapsed="0.684085"/>
+<for flavor="IN">
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.130167" level="INFO">${index} = 0</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.130167" elapsed="0.000000"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:09.516442" level="INFO">Typing text '@trantruc2001' into text field 'id=UsernameOrEmail'.</msg>
-<arg>id=UsernameOrEmail</arg>
-<arg>@trantruc2001</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T17:53:09.516442" elapsed="0.206200"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.130167" level="INFO">0,a</msg>
+<arg>${index},${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.130167" elapsed="0.000000"/>
 </kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:09.723643" level="INFO">Typing password into text field 'id=Password'.</msg>
-<msg time="2024-03-22T17:53:09.784766" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>id=Password</arg>
-<arg>TranPhuongNgocTruc200420011</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T17:53:09.722642" elapsed="0.147176"/>
+<var name="${item}">a</var>
+<status status="PASS" start="2024-04-02T16:13:54.129170" elapsed="0.000997"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.131164" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.130167" elapsed="0.000997"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:09.872082" level="INFO">Clicking element 'class=btn-login'.</msg>
-<arg>class=btn-login</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T17:53:09.872082" elapsed="0.643976"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.131164" level="INFO">1,b</msg>
+<arg>${index},${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.131164" elapsed="0.000000"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:10.535218" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
-<arg>Login was unsuccessful. Please correct the errors and try again.</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-03-22T17:53:10.516058" elapsed="0.019160"/>
+<var name="${item}">b</var>
+<status status="PASS" start="2024-04-02T16:13:54.130167" elapsed="0.000997"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.132161" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.131164" elapsed="0.000997"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-22T17:53:10.536217" elapsed="2.394593"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.133159" level="INFO">2,c</msg>
+<arg>${index},${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.132161" elapsed="0.000998"/>
 </kw>
-<tag>Low</tag>
-<status status="PASS" start="2024-03-22T17:53:03.970948" elapsed="8.959862"/>
+<var name="${item}">c</var>
+<status status="PASS" start="2024-04-02T16:13:54.131164" elapsed="0.001995"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.134156" level="INFO">${index} = 3</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.133159" elapsed="0.000997"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.134156" level="INFO">3,d</msg>
+<arg>${index},${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.134156" elapsed="0.000000"/>
+</kw>
+<var name="${item}">d</var>
+<status status="PASS" start="2024-04-02T16:13:54.133159" elapsed="0.000997"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.134156" level="INFO">${index} = 4</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.134156" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.137148" level="INFO">4,e</msg>
+<arg>${index},${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.135186" elapsed="0.001962"/>
+</kw>
+<var name="${item}">e</var>
+<status status="PASS" start="2024-04-02T16:13:54.134156" elapsed="0.002992"/>
+</iter>
+<var>${item}</var>
+<value>@{List}</value>
+<status status="PASS" start="2024-04-02T16:13:54.129170" elapsed="0.007978"/>
+</for>
+<status status="PASS" start="2024-04-02T16:13:54.128169" elapsed="0.009580"/>
 </test>
-<test id="s1-t3" name="Log in success" line="27">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-03-22T17:53:12.934810" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
-<arg>${URLMain}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-22T17:53:12.934810" elapsed="7.888727"/>
+<test id="s1-t3" name="FOR-IN-ENUMERATE" line="25">
+<for flavor="IN ENUMERATE">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.139758" level="INFO">0,a</msg>
+<arg>${index},${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.139758" elapsed="0.000000"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:20.824537" level="INFO">Clicking element 'class=fa-user-circle'.</msg>
-<arg>class=fa-user-circle</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T17:53:20.823537" elapsed="0.908190"/>
+<var name="${index}">0</var>
+<var name="${item}">a</var>
+<status status="PASS" start="2024-04-02T16:13:54.138754" elapsed="0.001004"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.139758" level="INFO">1,b</msg>
+<arg>${index},${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.139758" elapsed="0.000000"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:21.732733" level="INFO">Typing text '@trantruc2001' into text field 'id=UsernameOrEmail'.</msg>
-<arg>id=UsernameOrEmail</arg>
-<arg>@trantruc2001</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T17:53:21.732733" elapsed="0.192025"/>
+<var name="${index}">1</var>
+<var name="${item}">b</var>
+<status status="PASS" start="2024-04-02T16:13:54.139758" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.140751" level="INFO">2,c</msg>
+<arg>${index},${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.139758" elapsed="0.000993"/>
 </kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:21.925777" level="INFO">Typing password into text field 'id=Password'.</msg>
-<msg time="2024-03-22T17:53:21.993899" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>id=Password</arg>
-<arg>TranPhuongNgocTruc20042001</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T17:53:21.925777" elapsed="0.220162"/>
+<var name="${index}">2</var>
+<var name="${item}">c</var>
+<status status="PASS" start="2024-04-02T16:13:54.139758" elapsed="0.000993"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.140751" level="INFO">3,d</msg>
+<arg>${index},${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.140751" elapsed="0.000000"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:22.147445" level="INFO">Clicking element 'class=btn-login'.</msg>
-<arg>class=btn-login</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-22T17:53:22.145939" elapsed="1.386022"/>
+<var name="${index}">3</var>
+<var name="${item}">d</var>
+<status status="PASS" start="2024-04-02T16:13:54.140751" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-02T16:13:54.140751" level="INFO">4,e</msg>
+<arg>${index},${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-02T16:13:54.140751" elapsed="0.000000"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-03-22T17:53:23.559282" level="INFO">Current page contains text 'Welcome to our store.'.</msg>
-<arg>Welcome to our store.</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-03-22T17:53:23.532966" elapsed="0.026316"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-22T17:53:23.560292" elapsed="2.453063"/>
-</kw>
-<tag>High</tag>
-<status status="PASS" start="2024-03-22T17:53:12.932810" elapsed="13.081583"/>
+<var name="${index}">4</var>
+<var name="${item}">e</var>
+<status status="PASS" start="2024-04-02T16:13:54.140751" elapsed="0.000998"/>
+</iter>
+<var>${index}</var>
+<var>${item}</var>
+<value>@{List}</value>
+<status status="PASS" start="2024-04-02T16:13:54.138754" elapsed="0.002995"/>
+</for>
+<status status="PASS" start="2024-04-02T16:13:54.138754" elapsed="0.002995"/>
 </test>
-<doc>This is my test documentation
-You can see. If you want write
-so long data. You can write this</doc>
-<status status="PASS" start="2024-03-22T17:52:50.438223" elapsed="35.578184"/>
+<status status="PASS" start="2024-04-02T16:13:53.933963" elapsed="0.210822"/>
 </suite>
 <statistics>
 <total>
 <stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">High</stat>
-<stat pass="1" fail="0" skip="0">Low</stat>
-<stat pass="1" fail="0" skip="0">Medium</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="controlSTructure">controlSTructure</stat>
 </suite>
 </statistics>
 <errors>
