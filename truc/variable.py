@@ -1,0 +1,1 @@
+LIST__ANIMAL=["Cat", "Dog", "Fish", "Mouse", "Elephant"]

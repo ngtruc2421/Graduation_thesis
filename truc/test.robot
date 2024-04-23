@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Variables    variable.py
 *** Test Cases ***
 Log in not success
     [Tags]    Low
@@ -14,4 +15,5 @@ Log in success
     Input Text    id=UsernameOrEmail    @trantruc2001
     Input Password    id=Password    TranPhuongNgocTruc20042001
     Click Element    class=btn-login
+    Input Text    locator    $[LIST__ANIMAl]
     Page Should Contain    Welcome to our store.
