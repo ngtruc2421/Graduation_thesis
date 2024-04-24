@@ -1,5 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-22T10:59:34.700814" rpa="false" schemaversion="5">
+=======
+<<<<<<< HEAD
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-26T15:29:33.529743" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo Variables" source="C:\Users\tt179\Desktop\Graduation_thesis\truc\demo_variables.robot">
+<test id="s1-t1" name="Test variables list" line="16">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-03-26T15:29:33.729758" level="INFO">${list} = ['a', 'b', 'c', 'd', 1]</msg>
+<var>${list}</var>
+<arg>['a','b','c','d', 1]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-03-26T15:29:33.729758" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-26T15:29:33.729758" level="INFO">john</msg>
+<arg>${dictionary}[name]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-26T15:29:33.729758" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-26T15:29:33.744767" level="INFO">23</msg>
+<arg>${dictionary.age}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-26T15:29:33.729758" elapsed="0.015009"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-26T15:29:33.746298" level="FAIL">Variable '${locall}' not found. Did you mean:
+    ${local}</msg>
+<arg>${locall}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2024-03-26T15:29:33.744767" elapsed="0.001531">Variable '${locall}' not found. Did you mean:
+    ${local}</status>
+</kw>
+<kw name="Set Environment Variable" owner="OperatingSystem">
+<arg>URLLogin</arg>
+<arg>https:/google.com</arg>
+<doc>Sets an environment variable to a specified value.</doc>
+<status status="NOT RUN" start="2024-03-26T15:29:33.747349" elapsed="0.000142"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<var>${lst}</var>
+<arg>first</arg>
+<arg>second</arg>
+<arg>third</arg>
+<arg>fourth</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" start="2024-03-26T15:29:33.747491" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>${dic}</var>
+<arg>name=joo</arg>
+<arg>class=12</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" start="2024-03-26T15:29:33.748552" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${dic.name}</var>
+<arg>junghoon</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-03-26T15:29:33.748552" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${lst}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-03-26T15:29:33.749514" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${dic}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-03-26T15:29:33.751235" elapsed="0.000000"/>
+</kw>
+<kw name="Length Should Be" owner="BuiltIn">
+<arg>${dic}</arg>
+<arg>2</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="NOT RUN" start="2024-03-26T15:29:33.751402" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${boolean}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-03-26T15:29:33.751402" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${local}</arg>
+<arg>${SPACE*3}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-03-26T15:29:33.751402" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-03-26T15:29:33.729758" elapsed="0.021644">Variable '${locall}' not found. Did you mean:
+    ${local}</status>
+</test>
+<status status="FAIL" start="2024-03-26T15:29:33.529743" elapsed="0.221659"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+=======
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-12T15:02:14.881430" rpa="false" schemaversion="5">
+>>>>>>> ee2eb803e33ccd1c90bea4360c0726ee1ddf8542
 <suite id="s1" name="controlStructure" source="C:\Users\truc.tran\Desktop\Graduation_thesis\truc\controlStructure.robot">
 <test id="s1-t1" name="While loop example" line="43">
 <kw name="Set Variable" owner="BuiltIn">
@@ -270,12 +369,25 @@
 </suite>
 <statistics>
 <total>
+<<<<<<< HEAD
 <stat pass="2" fail="0" skip="0">All Tests</stat>
+=======
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+>>>>>>> fd8e2981234e66305f5fa42804d1c016f51a39c0
+>>>>>>> ee2eb803e33ccd1c90bea4360c0726ee1ddf8542
 </total>
 <tag>
 </tag>
 <suite>
+<<<<<<< HEAD
 <stat pass="2" fail="0" skip="0" id="s1" name="controlStructure">controlStructure</stat>
+=======
+<<<<<<< HEAD
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo Variables">Demo Variables</stat>
+=======
+<stat pass="1" fail="1" skip="0" id="s1" name="controlStructure">controlStructure</stat>
+>>>>>>> fd8e2981234e66305f5fa42804d1c016f51a39c0
+>>>>>>> ee2eb803e33ccd1c90bea4360c0726ee1ddf8542
 </suite>
 </statistics>
 <errors>
