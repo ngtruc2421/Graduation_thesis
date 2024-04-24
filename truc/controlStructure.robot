@@ -49,7 +49,7 @@ While loop example
     END
     Log    ${c}
 
-If else example
+example
     ${c}=    Set Variable    ${1}
     WHILE    ${c} < 10
         IF    ${c} < 3    
