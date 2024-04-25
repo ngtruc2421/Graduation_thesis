@@ -137,10 +137,32 @@ d={
     "age":23,
     "phone":"0109234123"
 }
-#ghi file json
-with open('demo.json','w') as f:
-    json.dump("This is demo json data",f)
-# chuyển d thành dữ liệu json
-js_d=json.dumps(d)
-print(js_d)
-print(type(d))
+# #ghi file json
+# with open('demo.json','w') as f:
+#     json.dump("This is demo json data",f)
+# # chuyển d thành dữ liệu json
+# js_d=json.dumps(d)
+# print(js_d)
+# print(type(d))
+
+# a=input("Name: ")
+# b=float(input("Price: "))
+# print("The product is "+a+" .It is "+str(b)+" vnd")
+
+keys=d.keys() #lấy ra các keys
+print(keys)
+values=d.values() #lấy danh sách các giá trị
+print(values)
+items=d.items()
+print(items)
+gets=d.get("name") #lấy giá trị thông qua key được truyền vào
+print(gets)
+a=d.copy() #sao chép cả 1 dictionary
+print(a)
+pops=d.pop("ages","age default") # xóa phần tử thông qua key và trả về giá trị phần tử muốn xóa
+print(pops)
+print(d)
+a["address"]="42 LuanDon" # thêm 1 cặp key value vào dictionary
+print(a)
+a["address"]="New york" #gán giá trí
+print(a)

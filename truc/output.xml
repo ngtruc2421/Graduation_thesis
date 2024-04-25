@@ -1,395 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-22T10:59:34.700814" rpa="false" schemaversion="5">
-=======
-<<<<<<< HEAD
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-26T15:29:33.529743" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo Variables" source="C:\Users\tt179\Desktop\Graduation_thesis\truc\demo_variables.robot">
-<test id="s1-t1" name="Test variables list" line="16">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-03-26T15:29:33.729758" level="INFO">${list} = ['a', 'b', 'c', 'd', 1]</msg>
-<var>${list}</var>
-<arg>['a','b','c','d', 1]</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-03-26T15:29:33.729758" elapsed="0.000000"/>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-25T11:54:47.518400" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\truc.tran\Desktop\Graduation_thesis\truc\test.robot">
+<test id="s1-t1" name="Log in not success" line="8">
+<kw name="Setup Keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:54:47.744342" level="INFO">Opening browser 'chrome' to base url ' https://bearstore-testsite.smartbear.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-25T11:54:47.744342" elapsed="5.686150"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-03-26T15:29:33.729758" level="INFO">john</msg>
-<arg>${dictionary}[name]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-03-26T15:29:33.729758" elapsed="0.000000"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-25T11:54:53.430492" elapsed="0.074798"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-03-26T15:29:33.744767" level="INFO">23</msg>
-<arg>${dictionary.age}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-03-26T15:29:33.729758" elapsed="0.015009"/>
+<status status="PASS" start="2024-04-25T11:54:47.743320" elapsed="5.761970"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-03-26T15:29:33.746298" level="FAIL">Variable '${locall}' not found. Did you mean:
-    ${local}</msg>
-<arg>${locall}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="FAIL" start="2024-03-26T15:29:33.744767" elapsed="0.001531">Variable '${locall}' not found. Did you mean:
-    ${local}</status>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-25T11:54:53.507286" elapsed="0.003989"/>
 </kw>
-<kw name="Set Environment Variable" owner="OperatingSystem">
-<arg>URLLogin</arg>
-<arg>https:/google.com</arg>
-<doc>Sets an environment variable to a specified value.</doc>
-<status status="NOT RUN" start="2024-03-26T15:29:33.747349" elapsed="0.000142"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:54:53.512271" level="INFO">Clicking element 'css:.fa-user-circle'.</msg>
+<arg>css:.fa-user-circle</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T11:54:53.511275" elapsed="0.840501"/>
 </kw>
-<kw name="Create List" owner="BuiltIn">
-<var>${lst}</var>
-<arg>first</arg>
-<arg>second</arg>
-<arg>third</arg>
-<arg>fourth</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="NOT RUN" start="2024-03-26T15:29:33.747491" elapsed="0.000000"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:54:54.352770" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>css:#UsernameOrEmail</arg>
+<arg>${USER_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T11:54:54.352770" elapsed="0.187013"/>
 </kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<var>${dic}</var>
-<arg>name=joo</arg>
-<arg>class=12</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="NOT RUN" start="2024-03-26T15:29:33.748552" elapsed="0.000000"/>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:54:54.542778" level="INFO">Typing password into text field 'css:#Password'.</msg>
+<msg time="2024-04-25T11:54:54.596631" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:#Password</arg>
+<arg>${PASS_WRONG}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T11:54:54.541786" elapsed="0.148593"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${dic.name}</var>
-<arg>junghoon</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-03-26T15:29:33.748552" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:54:54.691377" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>css:.btn-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T11:54:54.691377" elapsed="0.637261"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<arg>${lst}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-03-26T15:29:33.749514" elapsed="0.000000"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:54:55.366790" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<arg>Login was unsuccessful. Please correct the errors and try again.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-04-25T11:54:55.330631" elapsed="0.036159"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<arg>${dic}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-03-26T15:29:33.751235" elapsed="0.000000"/>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-25T11:54:55.366790" elapsed="2.413574"/>
 </kw>
-<kw name="Length Should Be" owner="BuiltIn">
-<arg>${dic}</arg>
-<arg>2</arg>
-<doc>Verifies that the length of the given item is correct.</doc>
-<status status="NOT RUN" start="2024-03-26T15:29:33.751402" elapsed="0.000000"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<arg>${boolean}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-03-26T15:29:33.751402" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${local}</arg>
-<arg>${SPACE*3}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2024-03-26T15:29:33.751402" elapsed="0.000000"/>
-</kw>
-<status status="FAIL" start="2024-03-26T15:29:33.729758" elapsed="0.021644">Variable '${locall}' not found. Did you mean:
-    ${local}</status>
+<tag>Low</tag>
+<status status="PASS" start="2024-04-25T11:54:47.742322" elapsed="10.040160"/>
 </test>
-<status status="FAIL" start="2024-03-26T15:29:33.529743" elapsed="0.221659"/>
+<test id="s1-t2" name="Log in success" line="16">
+<kw name="Setup Keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:54:57.789403" level="INFO">Opening browser 'chrome' to base url ' https://bearstore-testsite.smartbear.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-25T11:54:57.788407" elapsed="2.627375"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-25T11:55:00.416775" elapsed="2.958616"/>
+</kw>
+<status status="PASS" start="2024-04-25T11:54:57.787400" elapsed="5.587991"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-25T11:55:03.378387" elapsed="0.024929"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:55:03.404314" level="INFO">Clicking element 'css:.fa-user-circle'.</msg>
+<arg>css:.fa-user-circle</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T11:55:03.404314" elapsed="0.791276"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:55:04.196585" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>css:#UsernameOrEmail</arg>
+<arg>${USER_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T11:55:04.195590" elapsed="0.135156"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:55:04.332747" level="INFO">Typing password into text field 'css:#Password'.</msg>
+<msg time="2024-04-25T11:55:04.384775" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:#Password</arg>
+<arg>${PASS_RIGHT}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T11:55:04.331748" elapsed="0.143783"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:55:04.475531" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>css:.btn-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-25T11:55:04.475531" elapsed="1.028352"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-25T11:55:05.526822" level="INFO">Current page contains text 'Welcome to our store.'.</msg>
+<arg>Welcome to our store.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-04-25T11:55:05.504880" elapsed="0.021942"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-25T11:55:05.527820" elapsed="2.294489"/>
+</kw>
+<tag>High</tag>
+<status status="PASS" start="2024-04-25T11:54:57.785871" elapsed="10.038440"/>
+</test>
+<status status="PASS" start="2024-04-25T11:54:47.520425" elapsed="20.308529"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
-=======
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-12T15:02:14.881430" rpa="false" schemaversion="5">
->>>>>>> ee2eb803e33ccd1c90bea4360c0726ee1ddf8542
-<suite id="s1" name="controlStructure" source="C:\Users\truc.tran\Desktop\Graduation_thesis\truc\controlStructure.robot">
-<test id="s1-t1" name="While loop example" line="43">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-04-22T10:59:34.905750" level="INFO">${c} = 1</msg>
-<var>${c}</var>
-<arg>${1}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-04-22T10:59:34.905750" elapsed="0.000000"/>
-</kw>
-<while condition="${c} &lt; 3">
-<iter>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-04-22T10:59:34.906809" level="INFO">Day là vong lap white</msg>
-<arg>Day là vong lap white</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-22T10:59:34.906809" elapsed="0.000000"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-22T10:59:34.906809" level="INFO">${c} = 2</msg>
-<var>${c}</var>
-<arg>${c} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-22T10:59:34.906809" elapsed="0.001029"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.408013" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T10:59:34.907838" elapsed="0.500175"/>
-</kw>
-<status status="PASS" start="2024-04-22T10:59:34.906809" elapsed="0.501204"/>
-</iter>
-<iter>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.410016" level="INFO">Day là vong lap white</msg>
-<arg>Day là vong lap white</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.408972" elapsed="0.001044"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.411016" level="INFO">${c} = 3</msg>
-<var>${c}</var>
-<arg>${c} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.410016" elapsed="0.001000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.913180" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.411016" elapsed="0.502164"/>
-</kw>
-<status status="PASS" start="2024-04-22T10:59:35.408013" elapsed="0.505167"/>
-</iter>
-<status status="PASS" start="2024-04-22T10:59:34.906809" elapsed="1.006371"/>
-</while>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.914177" level="INFO">3</msg>
-<arg>${c}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.914177" elapsed="0.000997"/>
-</kw>
-<status status="PASS" start="2024-04-22T10:59:34.904721" elapsed="1.011451"/>
-</test>
-<test id="s1-t2" name="example" line="52">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.920161" level="INFO">${c} = 1</msg>
-<var>${c}</var>
-<arg>${1}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.918166" elapsed="0.001995"/>
-</kw>
-<while condition="${c} &lt; 10">
-<iter>
-<if>
-<branch type="IF" condition="${c} &lt; 3">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.921158" level="INFO">${c} = 2</msg>
-<var>${c}</var>
-<arg>${c} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.921158" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-04-22T10:59:35.921158" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE IF" condition="${c} &lt; 5">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${c}</var>
-<arg>${c} + 2</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-04-22T10:59:35.922155" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-04-22T10:59:35.921158" elapsed="0.000997"/>
-</branch>
-<branch type="ELSE">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${c}</var>
-<arg>${c} + 3</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-04-22T10:59:35.922155" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-04-22T10:59:35.922155" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2024-04-22T10:59:35.921158" elapsed="0.000997"/>
-</if>
-<status status="PASS" start="2024-04-22T10:59:35.920161" elapsed="0.001994"/>
-</iter>
-<iter>
-<if>
-<branch type="IF" condition="${c} &lt; 3">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.923153" level="INFO">${c} = 3</msg>
-<var>${c}</var>
-<arg>${c} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.922155" elapsed="0.000998"/>
-</kw>
-<status status="PASS" start="2024-04-22T10:59:35.922155" elapsed="0.000998"/>
-</branch>
-<branch type="ELSE IF" condition="${c} &lt; 5">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${c}</var>
-<arg>${c} + 2</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-04-22T10:59:35.923153" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-04-22T10:59:35.923153" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${c}</var>
-<arg>${c} + 3</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-04-22T10:59:35.924151" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-04-22T10:59:35.923153" elapsed="0.000998"/>
-</branch>
-<status status="PASS" start="2024-04-22T10:59:35.922155" elapsed="0.001996"/>
-</if>
-<status status="PASS" start="2024-04-22T10:59:35.922155" elapsed="0.001996"/>
-</iter>
-<iter>
-<if>
-<branch type="IF" condition="${c} &lt; 3">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${c}</var>
-<arg>${c} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-04-22T10:59:35.924151" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-04-22T10:59:35.924151" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE IF" condition="${c} &lt; 5">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.925178" level="INFO">${c} = 5</msg>
-<var>${c}</var>
-<arg>${c} + 2</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.924151" elapsed="0.001027"/>
-</kw>
-<status status="PASS" start="2024-04-22T10:59:35.924151" elapsed="0.001027"/>
-</branch>
-<branch type="ELSE">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${c}</var>
-<arg>${c} + 3</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-04-22T10:59:35.925178" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-04-22T10:59:35.925178" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2024-04-22T10:59:35.924151" elapsed="0.001027"/>
-</if>
-<status status="PASS" start="2024-04-22T10:59:35.924151" elapsed="0.001027"/>
-</iter>
-<iter>
-<if>
-<branch type="IF" condition="${c} &lt; 3">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${c}</var>
-<arg>${c} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-04-22T10:59:35.925178" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-04-22T10:59:35.925178" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE IF" condition="${c} &lt; 5">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${c}</var>
-<arg>${c} + 2</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-04-22T10:59:35.926174" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-04-22T10:59:35.926174" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.926174" level="INFO">${c} = 8</msg>
-<var>${c}</var>
-<arg>${c} + 3</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.926174" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-04-22T10:59:35.926174" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2024-04-22T10:59:35.925178" elapsed="0.000996"/>
-</if>
-<status status="PASS" start="2024-04-22T10:59:35.925178" elapsed="0.000996"/>
-</iter>
-<iter>
-<if>
-<branch type="IF" condition="${c} &lt; 3">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${c}</var>
-<arg>${c} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-04-22T10:59:35.927172" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-04-22T10:59:35.927172" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE IF" condition="${c} &lt; 5">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${c}</var>
-<arg>${c} + 2</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-04-22T10:59:35.927172" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-04-22T10:59:35.927172" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.929139" level="INFO">${c} = 11</msg>
-<var>${c}</var>
-<arg>${c} + 3</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.927172" elapsed="0.001967"/>
-</kw>
-<status status="PASS" start="2024-04-22T10:59:35.927172" elapsed="0.001967"/>
-</branch>
-<status status="PASS" start="2024-04-22T10:59:35.927172" elapsed="0.001967"/>
-</if>
-<status status="PASS" start="2024-04-22T10:59:35.926174" elapsed="0.002965"/>
-</iter>
-<status status="PASS" start="2024-04-22T10:59:35.920161" elapsed="0.008978"/>
-</while>
-<if>
-<branch type="IF" condition="${c} &lt; 12">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.930144" level="INFO">${c} = 16</msg>
-<var>${c}</var>
-<arg>${c}+5</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.930144" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-04-22T10:59:35.930144" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2024-04-22T10:59:35.930144" elapsed="0.000000"/>
-</if>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-04-22T10:59:35.931131" level="INFO">16</msg>
-<arg>${c}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-22T10:59:35.931131" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-04-22T10:59:35.918166" elapsed="0.013963"/>
-</test>
-<status status="PASS" start="2024-04-22T10:59:34.702808" elapsed="1.233312"/>
-</suite>
-<statistics>
-<total>
-<<<<<<< HEAD
 <stat pass="2" fail="0" skip="0">All Tests</stat>
-=======
-<stat pass="1" fail="1" skip="0">All Tests</stat>
->>>>>>> fd8e2981234e66305f5fa42804d1c016f51a39c0
->>>>>>> ee2eb803e33ccd1c90bea4360c0726ee1ddf8542
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">High</stat>
+<stat pass="1" fail="0" skip="0">Low</stat>
 </tag>
 <suite>
-<<<<<<< HEAD
-<stat pass="2" fail="0" skip="0" id="s1" name="controlStructure">controlStructure</stat>
-=======
-<<<<<<< HEAD
-<stat pass="0" fail="1" skip="0" id="s1" name="Demo Variables">Demo Variables</stat>
-=======
-<stat pass="1" fail="1" skip="0" id="s1" name="controlStructure">controlStructure</stat>
->>>>>>> fd8e2981234e66305f5fa42804d1c016f51a39c0
->>>>>>> ee2eb803e33ccd1c90bea4360c0726ee1ddf8542
+<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-04-25T11:54:47.513275" level="ERROR">Error in file 'C:\Users\truc.tran\Desktop\Graduation_thesis\truc\test.robot' on line 6: Non-existing setting 'No Screenshot'.</msg>
 </errors>
 </robot>
