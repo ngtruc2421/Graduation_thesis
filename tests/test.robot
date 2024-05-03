@@ -19,7 +19,6 @@ Log in success
     Input Password    css:#Password    TranPhuongNgocTruc20042001
     Click Element    css:.btn-login
     Page Should Contain    Welcome to our store.
-
 *** Keywords ***
 Sets up
     Open Browser    ${URL}    chrome
