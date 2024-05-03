@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-03T12:00:19.139432" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Suite" source="C:\Users\truc.tran\Desktop\Graduation_thesis\tests\login_suite.robot">
+<test id="s1-t1" name="Log in to system success" line="12">
+<kw name="Open Web" owner="base_page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:19.344749" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-03T12:00:19.344749" elapsed="6.260018"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-03T12:00:25.604767" elapsed="0.070931"/>
+</kw>
+<arg>${URL_LOGIN}</arg>
+<status status="PASS" start="2024-05-03T12:00:19.343720" elapsed="6.331978"/>
+</kw>
+<kw name="Input Text For A Field" owner="login_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:25.676703" elapsed="0.168541"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:25.846242" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${FIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:25.845244" elapsed="0.115607"/>
+</kw>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${USER_NAME}</arg>
+<status status="PASS" start="2024-05-03T12:00:25.675698" elapsed="0.285153"/>
+</kw>
+<kw name="Input Text For A Field" owner="login_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:25.961847" elapsed="0.058752"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:26.021596" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
+<arg>${FIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:26.020599" elapsed="0.112706"/>
+</kw>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASS_RIGHT}</arg>
+<status status="PASS" start="2024-05-03T12:00:25.960851" elapsed="0.172454"/>
+</kw>
+<kw name="Log In" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:26.134294" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:26.134294" elapsed="1.395626"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:26.134294" elapsed="1.395626"/>
+</kw>
+<kw name="Verify Success" owner="login_page">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:27.594367" level="INFO">Current page contains text 'Welcome to our store.'.</msg>
+<arg>${MESSAGE_SUCCESS}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-03T12:00:27.532914" elapsed="0.061453"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:27.531919" elapsed="0.062448"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-03T12:00:27.595378" elapsed="2.426432"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:19.343720" elapsed="10.680094"/>
+</test>
+<test id="s1-t2" name="Log in to system Fail" line="17">
+<kw name="Open Web" owner="base_page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:30.030817" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-03T12:00:30.029820" elapsed="5.961664"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-03T12:00:35.991484" elapsed="0.088458"/>
+</kw>
+<arg>${URL_LOGIN}</arg>
+<status status="PASS" start="2024-05-03T12:00:30.028801" elapsed="6.051141"/>
+</kw>
+<kw name="Log In With ${USER_NAME} and ${PASS_WRONG}" owner="login_page" source_name="Log In With ${NAME} and ${PASS}">
+<kw name="Input Text For A Field" owner="login_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:36.081937" elapsed="0.154592"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:36.237532" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${FIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:36.236529" elapsed="0.115469"/>
+</kw>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${NAME}</arg>
+<status status="PASS" start="2024-05-03T12:00:36.080940" elapsed="0.271058"/>
+</kw>
+<kw name="Input Text For A Field" owner="login_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:36.352993" elapsed="0.044886"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:36.398871" level="INFO">Typing text 'TranPhuongNgocTruc200420011' into text field 'css:#Password'.</msg>
+<arg>${FIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:36.397879" elapsed="0.115686"/>
+</kw>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASS}</arg>
+<status status="PASS" start="2024-05-03T12:00:36.351998" elapsed="0.161567"/>
+</kw>
+<kw name="Log In" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:36.514567" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:36.513565" elapsed="0.691639"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:36.513565" elapsed="0.692637"/>
+</kw>
+<kw name="Verify Fail" owner="login_page">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:37.221162" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<arg>${MESSAGE_FAIL}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-03T12:00:37.206202" elapsed="0.014960"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:37.206202" elapsed="0.014960"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:36.080940" elapsed="1.140222"/>
+</kw>
+<kw name="Log In With ${USER_NAME} and ${EMPTY}" owner="login_page" source_name="Log In With ${NAME} and ${PASS}">
+<kw name="Input Text For A Field" owner="login_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:37.222159" elapsed="0.033910"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:37.256069" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${FIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:37.256069" elapsed="0.108516"/>
+</kw>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${NAME}</arg>
+<status status="PASS" start="2024-05-03T12:00:37.222159" elapsed="0.142426"/>
+</kw>
+<kw name="Input Text For A Field" owner="login_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:37.365590" elapsed="0.054845"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:37.420435" level="INFO">Typing text '' into text field 'css:#Password'.</msg>
+<arg>${FIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:37.420435" elapsed="0.103726"/>
+</kw>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASS}</arg>
+<status status="PASS" start="2024-05-03T12:00:37.364585" elapsed="0.159576"/>
+</kw>
+<kw name="Log In" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:37.525155" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:37.525155" elapsed="0.612727"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:37.525155" elapsed="0.612727"/>
+</kw>
+<kw name="Verify Fail" owner="login_page">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:38.170847" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<arg>${MESSAGE_FAIL}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-03T12:00:38.138868" elapsed="0.031979"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:38.137882" elapsed="0.032965"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:37.222159" elapsed="0.949715"/>
+</kw>
+<kw name="Log In With ${EMPTY} and ${PASS_WRONG}" owner="login_page" source_name="Log In With ${NAME} and ${PASS}">
+<kw name="Input Text For A Field" owner="login_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:38.172842" elapsed="0.042136"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:38.215967" level="INFO">Typing text '' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${FIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:38.214978" elapsed="0.079775"/>
+</kw>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${NAME}</arg>
+<status status="PASS" start="2024-05-03T12:00:38.172842" elapsed="0.121911"/>
+</kw>
+<kw name="Input Text For A Field" owner="login_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:38.295750" elapsed="0.047873"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:38.343623" level="INFO">Typing text 'TranPhuongNgocTruc200420011' into text field 'css:#Password'.</msg>
+<arg>${FIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:38.343623" elapsed="0.128680"/>
+</kw>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASS}</arg>
+<status status="PASS" start="2024-05-03T12:00:38.294753" elapsed="0.177550"/>
+</kw>
+<kw name="Log In" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:38.472303" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:38.472303" elapsed="0.318809"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:38.472303" elapsed="0.318809"/>
+</kw>
+<kw name="Verify Fail" owner="login_page">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:39.123980" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<arg>${MESSAGE_FAIL}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-03T12:00:38.792110" elapsed="0.332858"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:38.792110" elapsed="0.332858"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:38.171874" elapsed="0.953094"/>
+</kw>
+<kw name="Log In With ${EMPTY} and ${EMPTY}" owner="login_page" source_name="Log In With ${NAME} and ${PASS}">
+<kw name="Input Text For A Field" owner="login_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:39.125967" elapsed="0.041887"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:39.167854" level="INFO">Typing text '' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${FIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:39.167854" elapsed="0.076795"/>
+</kw>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${NAME}</arg>
+<status status="PASS" start="2024-05-03T12:00:39.125967" elapsed="0.118682"/>
+</kw>
+<kw name="Input Text For A Field" owner="login_page">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:39.245646" elapsed="0.054859"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:39.301496" level="INFO">Typing text '' into text field 'css:#Password'.</msg>
+<arg>${FIELD}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:39.300505" elapsed="0.091749"/>
+</kw>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASS}</arg>
+<status status="PASS" start="2024-05-03T12:00:39.244649" elapsed="0.147605"/>
+</kw>
+<kw name="Log In" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:39.393251" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T12:00:39.393251" elapsed="0.638397"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:39.392254" elapsed="0.639394"/>
+</kw>
+<kw name="Verify Fail" owner="login_page">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-03T12:00:40.060735" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<arg>${MESSAGE_FAIL}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-03T12:00:40.032646" elapsed="0.028089"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:40.031648" elapsed="0.029087"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:39.124968" elapsed="0.935767"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-03T12:00:40.061737" elapsed="3.309553"/>
+</kw>
+<status status="PASS" start="2024-05-03T12:00:30.027805" elapsed="13.345489"/>
+</test>
+<status status="PASS" start="2024-05-03T12:00:19.141428" elapsed="24.235858"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Login Suite">Login Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
