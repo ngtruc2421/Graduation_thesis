@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-26T09:24:03.323895" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\tt179\Desktop\Graduation_thesis\tests">
+<suite id="s1-s1" name="Test" source="C:\Users\tt179\Desktop\Graduation_thesis\tests\test.robot">
+<test id="s1-s1-t1" name="Log in not success" line="8">
+<kw name="Sets up" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:03.545751" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-26T09:24:03.545751" elapsed="4.372433"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-26T09:24:07.918184" elapsed="0.049121"/>
+</kw>
+<status status="PASS" start="2024-04-26T09:24:03.545751" elapsed="4.421554"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:07.968304" level="INFO">Clicking element 'css:.fa-user-circle'.</msg>
+<arg>css:.fa-user-circle</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T09:24:07.967305" elapsed="0.885813"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:08.855194" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>css:#UsernameOrEmail</arg>
+<arg>@trantruc2001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T09:24:08.854185" elapsed="0.240845"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:09.099549" level="INFO">Typing password into text field 'css:#Password'.</msg>
+<msg time="2024-04-26T09:24:09.141841" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:#Password</arg>
+<arg>TranPhuongNgocTruc200420011</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T09:24:09.098552" elapsed="0.107568"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:09.206120" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>css:.btn-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T09:24:09.206120" elapsed="0.586828"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:09.823348" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<arg>Login was unsuccessful. Please correct the errors and try again.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-04-26T09:24:09.794036" elapsed="0.029312"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-26T09:24:09.825348" elapsed="2.391228"/>
+</kw>
+<tag>Low</tag>
+<status status="PASS" start="2024-04-26T09:24:03.545751" elapsed="8.670825"/>
+</test>
+<test id="s1-s1-t2" name="Log in success" line="15">
+<kw name="Sets up" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:12.216576" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-26T09:24:12.216576" elapsed="4.442662"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-26T09:24:16.659238" elapsed="0.047960"/>
+</kw>
+<status status="PASS" start="2024-04-26T09:24:12.216576" elapsed="4.492122"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:16.710860" level="INFO">Clicking element 'css:.fa-user-circle'.</msg>
+<arg>css:.fa-user-circle</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T09:24:16.710860" elapsed="0.731018"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:17.443021" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>css:#UsernameOrEmail</arg>
+<arg>@trantruc2001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T09:24:17.441878" elapsed="0.180795"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:17.623678" level="INFO">Typing password into text field 'css:#Password'.</msg>
+<msg time="2024-04-26T09:24:17.669676" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:#Password</arg>
+<arg>TranPhuongNgocTruc20042001</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T09:24:17.623678" elapsed="0.107112"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:17.731817" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>css:.btn-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T09:24:17.731817" elapsed="0.964628"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-26T09:24:18.725776" level="INFO">Current page contains text 'Welcome to our store.'.</msg>
+<arg>Welcome to our store.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-04-26T09:24:18.697447" elapsed="0.028329"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-26T09:24:18.726701" elapsed="2.333437"/>
+</kw>
+<tag>High</tag>
+<status status="PASS" start="2024-04-26T09:24:12.216576" elapsed="8.843562"/>
+</test>
+<status status="PASS" start="2024-04-26T09:24:03.339452" elapsed="17.722686"/>
+</suite>
+<status status="PASS" start="2024-04-26T09:24:03.323895" elapsed="17.739983"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">High</stat>
+<stat pass="1" fail="0" skip="0">Low</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Test">Tests.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
