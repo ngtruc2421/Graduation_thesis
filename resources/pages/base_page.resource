@@ -1,11 +1,11 @@
 *** Settings ***
-Library    SeleniumLibrary
+Resource    ../../configurations/config.resource
 
 *** Variables ***
 ${URL_BASE}    https://bearstore-testsite.smartbear.com/
+${BROWSER}    chrome
 
 *** Keywords ***
-Open Web
-    [Arguments]    ${URL}
-    Open Browser    ${URL}    chrome
+Access to ${URL}
+    Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window

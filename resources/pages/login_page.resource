@@ -16,7 +16,7 @@ Input Text For A Field
     Clear Element Text    ${FIELD}
     Input Text    ${FIELD}    ${TEXT}
 
-Log In
+Click log in button
     Click Element    ${LOG_IN_BUTTON}
 
 Verify Success
@@ -28,5 +28,5 @@ Verify Fail
 Log In With ${NAME} and ${PASS}
     Input Text For A Field    ${USERNAME_FIELD}    ${NAME}
     Input Text For A Field    ${PASSWORD_FIELD}    ${PASS}
-    Log In
+    Click log in button
     Verify Fail
