@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-08T11:49:14.547149" rpa="false" schemaversion="5">
+<suite id="s1" name="Search Suite" source="c:\Users\truc.tran\Desktop\Graduation_thesis\tests\search_suite.robot">
+<test id="s1-t1" name="Verify that user search fail with the letter special" line="11">
+<kw name="Search with the #@!" owner="search.pageobject" source_name="Search with the ${CONTENT}">
+<kw name="Access to ${URL_BASE}" owner="base_page" source_name="Access to ${URL}">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-08T11:49:22.008853" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-08T11:49:22.005887" elapsed="8.285834"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-08T11:49:30.295711" elapsed="0.097526"/>
+</kw>
+<status status="PASS" start="2024-05-08T11:49:21.997877" elapsed="8.400345"/>
+</kw>
+<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-08T11:49:30.405203" elapsed="0.140633"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-08T11:49:30.547822" elapsed="0.056849"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-08T11:49:30.606664" level="INFO">Typing text '#@!' into text field 'css:.instasearch-term'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-08T11:49:30.605667" elapsed="0.136635"/>
+</kw>
+<status status="PASS" start="2024-05-08T11:49:30.401218" elapsed="0.343080"/>
+</kw>
+<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-08T11:49:30.753272" elapsed="0.055851"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-08T11:49:30.813113" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-08T11:49:30.810120" elapsed="0.934134"/>
+</kw>
+<status status="PASS" start="2024-05-08T11:49:30.748289" elapsed="0.996973"/>
+</kw>
+<status status="PASS" start="2024-05-08T11:49:15.893104" elapsed="15.853149"/>
+</kw>
+<kw name="Verify users search fail" owner="search.pageobject">
+<kw name="Verify a case" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-08T11:49:33.824701" elapsed="0.056838"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-08T11:49:33.905484" level="INFO">Current page contains text 'Your search did not match any products.'.</msg>
+<arg>${TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-08T11:49:33.882536" elapsed="0.023913"/>
+</kw>
+<arg>${ERR_TITLE}</arg>
+<arg>${ERR_TITLE_CSS}</arg>
+<status status="PASS" start="2024-05-08T11:49:33.817687" elapsed="0.089779"/>
+</kw>
+<status status="PASS" start="2024-05-08T11:49:31.748244" elapsed="2.159222"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-08T11:49:33.911430" elapsed="3.526138"/>
+</kw>
+<status status="PASS" start="2024-05-08T11:49:15.888146" elapsed="21.553413"/>
+</test>
+<status status="PASS" start="2024-05-08T11:49:14.564133" elapsed="22.895414"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Search Suite">Search Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
