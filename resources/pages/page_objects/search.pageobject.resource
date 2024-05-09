@@ -13,8 +13,12 @@ ${DANGER_TITLE_CSS}    css:.alert-danger
 ${Empty}    \\             
 *** Keywords ***
 Search with the ${CONTENT}
-    Access to ${URL_BASE}
     Input ${CONTENT} For ${INPUT_SEARCH}
     Click on ${SEARCH_BTN} button
-Verify users search ${TEXT} at ${LOCATOR} 
-    Verify a case    ${TEXT}    ${LOCATOR}
+Verify users search fail when data is whitespace
+    Verify a case    ${DANGER_TITLE}    ${DANGER_TITLE_CSS}
+Verify that user search fail when it did not match any products
+    Verify a case     ${ALERT_TITLE}    ${ALERT_TITLE_CSS}
+Verify that user search success
+    Verify a case     ${SUCCESS_TITLE}    ${SUCCESS_TITLE_CSS}
+

@@ -9,7 +9,6 @@ ${PASSWORD_CSS}    css:#Password
 ${MESS_SUCCESS_CSS}    css:.h2
 ${MESS_FAIL_CSS}    css:.validation-summary-errors
 ${LOGIN_BTN_CSS}    css:.btn-login
-${URL_LOGIN}    ${URL_BASE}/login  
 ${MESS_SUCCESS}    Welcome to our store.  
 ${MESS_FAIL}    Login was unsuccessful. Please correct the errors and try again.
 ${PASS_RIGHT}=         TranPhuongNgocTruc20042001

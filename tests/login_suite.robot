@@ -4,12 +4,7 @@ Resource          ../resources/pages/base_page.resource
 Resource          ../configurations/config.resource
 Test Setup        Access to ${URL_LOGIN}
 Test Teardown     Close Browser
-*** Variables ***
-${PASS_RIGHT}=         TranPhuongNgocTruc20042001
-${PASS_WRONG}=         TranPhuongNgocTruc200420011
-${USER_NAME_RIGHT}=    @trantruc2001
-${USER_NAME_WRONG}=    @trantruc
-${EMPTY}=    
+Test Tags    High    Login
 *** Test Cases ***
 Verify that users can log in to system success
     Input username    ${USER_NAME_RIGHT}
