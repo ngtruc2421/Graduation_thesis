@@ -1,5 +1,7 @@
 *** Settings ***
 Resource    ../../configurations/config.resource
+*** Variables ***
+${EMPTY}=    
 
 *** Keywords ***
 Access to ${URL}
@@ -13,4 +15,7 @@ Input ${TEXT} For ${LOCATOR}
     Clear Element Text    ${LOCATOR}
     Input Text    ${LOCATOR}    ${TEXT}
 
-
+Verify a case
+    [Arguments]    ${TEXT}    ${LOCATOR}
+    Wait Until Element Is Visible    ${LOCATOR}
+    Page Should Contain    ${TEXT}
