@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../../configurations/config.resource
 *** Variables ***
-${EMPTY}=
+${EMPTY}=    
 
 *** Keywords ***
 Access to ${URL}

@@ -10,6 +10,7 @@ ${ALERT_TITLE}    Your search did not match any products.
 ${ALERT_TITLE_CSS}    css:.alert-warning
 ${DANGER_TITLE}    The minimum length for the search term is 2 characters.
 ${DANGER_TITLE_CSS}    css:.alert-danger
+${Empty}    \\             
 *** Keywords ***
 Search with the ${CONTENT}
     Access to ${URL_BASE}

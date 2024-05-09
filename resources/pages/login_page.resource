@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    base_page.resource
+Resource    ../../configurations/config.resource
 Library    SeleniumLibrary
 
 *** Variables ***
@@ -10,8 +11,11 @@ ${MESS_FAIL_CSS}    css:.validation-summary-errors
 ${LOGIN_BTN_CSS}    css:.btn-login
 ${URL_LOGIN}    ${URL_BASE}/login  
 ${MESS_SUCCESS}    Welcome to our store.  
-${MESS_FAIL}    Login was unsuccessful. Please correct the errors and try again. 
- 
+${MESS_FAIL}    Login was unsuccessful. Please correct the errors and try again.
+${PASS_RIGHT}=         TranPhuongNgocTruc20042001
+${PASS_WRONG}=         TranPhuongNgocTruc200420011
+${USER_NAME_RIGHT}=    @trantruc2001
+${USER_NAME_WRONG}=    @trantruc 
 *** Keywords ***
 Input username
     [Arguments]    ${TEXT}
