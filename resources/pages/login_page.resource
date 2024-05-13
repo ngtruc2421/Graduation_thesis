@@ -26,11 +26,11 @@ Input pass
 Click log in button
     Click on ${LOGIN_BTN_CSS} button
 
-Verify that users log in success
+Display the success title on the login page
     Wait Until Element Is Visible    ${MESS_SUCCESS_CSS}
     Page Should Contain    ${MESS_SUCCESS}
 
-Verify that users log in fail
+Display the fail title on the login page
     Wait Until Element Is Visible    ${MESS_FAIL_CSS}
     Page Should Contain    ${MESS_FAIL}
 
@@ -38,4 +38,4 @@ Log in fail with ${NAME} and ${PASS}
     Input username    ${NAME}
     Input pass    ${PASS}
     Click log in button
-    Verify that users log in fail
+    Display the fail title on the login page
