@@ -7,9 +7,13 @@ ${EMPTY}=
 Access to ${URL}
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
+Click on the web element
+    [Arguments]    ${locator}
+    Wait Until Element Is Visible    ${locator}
+    Wait Until Element Is Enabled    ${locator}
+    Click Element    ${locator}
 Click on ${LOCATOR} button
-    Wait Until Element Is Visible    ${LOCATOR}
-    Click Element    ${LOCATOR}
+    Click on the web element    ${LOCATOR}
 Input ${TEXT} For ${LOCATOR}
     Wait Until Element Is Visible    ${LOCATOR}      
     Clear Element Text    ${LOCATOR}
