@@ -2,7 +2,6 @@
 Resource          ../resources/pages/page_objects/search.pageobject.resource
 Resource          ../resources/pages/login_page.resource
 Test Teardown     Close Browser
-Test Tags    High,Search
 *** Test Cases ***
 #### HASN'T LOGGED IN ####
 Verify that user can search the content with lowercase characters when user is not logged into the system

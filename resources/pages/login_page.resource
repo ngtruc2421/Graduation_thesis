@@ -4,11 +4,11 @@ Resource    ../../configurations/config.resource
 Library    SeleniumLibrary
 
 *** Variables ***
-${USERNAME_CSS}    css:#UsernameOrEmail
-${PASSWORD_CSS}    css:#Password
-${MESS_SUCCESS_CSS}    css:.h2
-${MESS_FAIL_CSS}    css:.validation-summary-errors
-${LOGIN_BTN_CSS}    css:.btn-login
+${USERNAME_ELE}    css:#UsernameOrEmail
+${PASSWORD_ELE}    css:#Password
+${MESS_SUCCESS_ELE}    css:.h2
+${MESS_FAIL_ELE}    css:.validation-summary-errors
+${LOGIN_BTN_ELE}    css:.btn-login
 ${MESS_SUCCESS}    Welcome to our store.  
 ${MESS_FAIL}    Login was unsuccessful. Please correct the errors and try again.
 ${PASS_RIGHT}=         TranPhuongNgocTruc20042001
@@ -18,24 +18,27 @@ ${USER_NAME_WRONG}=    @trantruc
 *** Keywords ***
 Input username
     [Arguments]    ${TEXT}
-    Input ${TEXT} For ${USERNAME_CSS}
+    Input ${TEXT} For ${USERNAME_ELE}
 Input pass
     [Arguments]    ${TEXT}
-    Input ${TEXT} For ${PASSWORD_CSS}    
+    Input ${TEXT} For ${PASSWORD_ELE}    
 
-Click log in button
-    Click on ${LOGIN_BTN_CSS} button
+Click the Login button
+    Click on ${LOGIN_BTN_ELE} button
 
 Display the success title on the login page
-    Wait Until Element Is Visible    ${MESS_SUCCESS_CSS}
+    Wait Until Element Is Visible    ${MESS_SUCCESS_ELE}
     Page Should Contain    ${MESS_SUCCESS}
 
 Display the fail title on the login page
-    Wait Until Element Is Visible    ${MESS_FAIL_CSS}
+    Wait Until Element Is Visible    ${MESS_FAIL_ELE}
     Page Should Contain    ${MESS_FAIL}
 
-Log in fail with ${NAME} and ${PASS}
+Login with ${NAME} and ${PASS}
     Input username    ${NAME}
     Input pass    ${PASS}
-    Click log in button
+    Click the Login button    
+ #TC
+Log in fail with ${NAME} and ${PASS}
+    Log in with ${NAME} and ${PASS}
     Display the fail title on the login page
