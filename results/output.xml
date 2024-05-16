@@ -1,1029 +1,1671 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-13T11:37:59.628722" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="C:\Users\truc.tran\Desktop\Graduation_thesis\tests">
-<suite id="s1-s1" name="Search Suite" source="C:\Users\truc.tran\Desktop\Graduation_thesis\tests\search_suite.robot">
-<test id="s1-s1-t1" name="Verify that user can search the content with lowercase characters when user is not logged into the system" line="8">
-<kw name="Access to ${URL_BASE}" owner="base_page" source_name="Access to ${URL}">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-16T10:58:31.337501" rpa="false" schemaversion="5">
+<suite id="s1" name="searchUser suite &amp; Search Suite">
+<suite id="s1-s1" name="searchUser suite" source="C:\Users\truc.tran\Desktop\Graduation_thesis\tests\searchUser_suite.robot">
+<test id="s1-s1-t1" name="Verify that user can search the content with lowercase characters when user is logged into the system" line="7">
+<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:37:59.930915" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com'.</msg>
+<msg time="2024-05-16T10:58:31.640736" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-13T11:37:59.930915" elapsed="5.003422"/>
+<status status="PASS" start="2024-05-16T10:58:31.640736" elapsed="8.601695"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-13T11:38:04.934337" elapsed="0.079787"/>
+<status status="PASS" start="2024-05-16T10:58:40.242431" elapsed="0.083572"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:37:59.929946" elapsed="5.084178"/>
+<status status="PASS" start="2024-05-16T10:58:31.639738" elapsed="8.686265"/>
+</kw>
+<kw name="Input username" owner="login_page">
+<kw name="Input ${TEXT} For ${USERNAME_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:58:40.331994" elapsed="0.099730"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:58:40.432718" elapsed="0.058844"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:58:40.493591" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:58:40.492557" elapsed="0.111882"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:58:40.329010" elapsed="0.275429"/>
+</kw>
+<arg>${USER_NAME_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T10:58:40.328004" elapsed="0.276435"/>
+</kw>
+<kw name="Input pass" owner="login_page">
+<kw name="Input ${TEXT} For ${PASSWORD_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:58:40.606445" elapsed="0.026918"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:58:40.633363" elapsed="0.047872"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:58:40.682263" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:58:40.681235" elapsed="0.113353"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:58:40.606445" elapsed="0.188143"/>
+</kw>
+<arg>${PASS_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T10:58:40.605438" elapsed="0.189150"/>
+</kw>
+<kw name="Click log in button" owner="login_page">
+<kw name="Click on ${LOGIN_BTN_ELE} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:58:40.796659" elapsed="0.020921"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T10:58:40.817580" elapsed="0.019946"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:58:40.838524" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:58:40.837526" elapsed="3.840987"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T10:58:40.796659" elapsed="3.881854"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:58:40.795635" elapsed="3.882878"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:58:40.795635" elapsed="3.882878"/>
 </kw>
 <kw name="Search with the ball" owner="search.pageobject" source_name="Search with the ${CONTENT}">
 <kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:05.022103" elapsed="0.102166"/>
+<status status="PASS" start="2024-05-16T10:58:44.680740" elapsed="0.030351"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:05.125267" elapsed="0.083777"/>
+<status status="PASS" start="2024-05-16T10:58:44.711091" elapsed="0.039101"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:05.210043" level="INFO">Typing text 'ball' into text field 'css:.instasearch-term'.</msg>
+<msg time="2024-05-16T10:58:44.750192" level="INFO">Typing text 'ball' into text field 'css:.instasearch-term'.</msg>
 <arg>${LOCATOR}</arg>
 <arg>${TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:05.210043" elapsed="0.081247"/>
+<status status="PASS" start="2024-05-16T10:58:44.750192" elapsed="0.104410"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:05.019117" elapsed="0.273171"/>
+<status status="PASS" start="2024-05-16T10:58:44.680740" elapsed="0.173862"/>
 </kw>
 <kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
 <kw name="Click on the web element" owner="base_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:05.292288" elapsed="0.046875"/>
+<status status="PASS" start="2024-05-16T10:58:44.855608" elapsed="0.036893"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:38:05.339163" elapsed="0.035904"/>
+<status status="PASS" start="2024-05-16T10:58:44.892501" elapsed="0.047635"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:05.376063" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<msg time="2024-05-16T10:58:44.941134" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:05.375067" elapsed="1.202229"/>
+<status status="PASS" start="2024-05-16T10:58:44.940136" elapsed="0.909473"/>
 </kw>
 <arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:38:05.292288" elapsed="1.285008"/>
+<status status="PASS" start="2024-05-16T10:58:44.855608" elapsed="0.994001"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:05.292288" elapsed="1.286011"/>
+<status status="PASS" start="2024-05-16T10:58:44.854602" elapsed="0.995007"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:05.017121" elapsed="1.561178"/>
+<status status="PASS" start="2024-05-16T10:58:44.679738" elapsed="1.169871"/>
 </kw>
 <kw name="Verify that user search success" owner="search.pageobject">
 <kw name="Verify a case" owner="base_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:06.579291" elapsed="0.020945"/>
+<status status="PASS" start="2024-05-16T10:58:45.851609" elapsed="0.088757"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:06.618186" level="INFO">Current page contains text 'Search result for'.</msg>
+<msg time="2024-05-16T10:58:45.957320" level="INFO">Current page contains text 'Search result for'.</msg>
 <arg>${TEXT}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-05-13T11:38:06.601233" elapsed="0.016953"/>
+<status status="PASS" start="2024-05-16T10:58:45.940366" elapsed="0.016954"/>
 </kw>
 <arg>${SUCCESS_TITLE}</arg>
-<arg>${SUCCESS_TITLE_CSS}</arg>
-<status status="PASS" start="2024-05-13T11:38:06.579291" elapsed="0.038895"/>
+<arg>${SUCCESS_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T10:58:45.850605" elapsed="0.106715"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:06.578299" elapsed="0.039887"/>
+<status status="PASS" start="2024-05-16T10:58:45.850605" elapsed="0.106715"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-13T11:38:06.619183" elapsed="2.342136"/>
+<status status="PASS" start="2024-05-16T10:58:45.958317" elapsed="2.295614"/>
 </kw>
-<tag>High</tag>
-<tag>Search</tag>
+<tag>High,Search</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2024-05-13T11:37:59.928921" elapsed="9.033708"/>
+<status status="PASS" start="2024-05-16T10:58:31.638720" elapsed="16.617254"/>
 </test>
-<test id="s1-s1-t2" name="Verify that user can search the content with uppercase characters when user is not logged into the system" line="13">
-<kw name="Access to ${URL_BASE}" owner="base_page" source_name="Access to ${URL}">
+<test id="s1-s1-t2" name="Verify that user can search the content with uppercase characters when user is logged into the system" line="15">
+<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:08.970823" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com'.</msg>
+<msg time="2024-05-16T10:58:48.263863" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-13T11:38:08.969827" elapsed="5.762044"/>
+<status status="PASS" start="2024-05-16T10:58:48.262867" elapsed="6.852309"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-13T11:38:14.731871" elapsed="0.090751"/>
+<status status="PASS" start="2024-05-16T10:58:55.115176" elapsed="0.083929"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:08.968828" elapsed="5.853794"/>
+<status status="PASS" start="2024-05-16T10:58:48.261834" elapsed="6.937271"/>
+</kw>
+<kw name="Input username" owner="login_page">
+<kw name="Input ${TEXT} For ${USERNAME_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:58:55.204113" elapsed="0.112677"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:58:55.317789" elapsed="0.057848"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:58:55.375637" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:58:55.375637" elapsed="0.116768"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:58:55.202096" elapsed="0.290309"/>
+</kw>
+<arg>${USER_NAME_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T10:58:55.201102" elapsed="0.291303"/>
+</kw>
+<kw name="Input pass" owner="login_page">
+<kw name="Input ${TEXT} For ${PASSWORD_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:58:55.493408" elapsed="0.035899"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:58:55.529307" elapsed="0.047877"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:58:55.577184" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:58:55.577184" elapsed="0.105320"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:58:55.493408" elapsed="0.189096"/>
+</kw>
+<arg>${PASS_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T10:58:55.493408" elapsed="0.189096"/>
+</kw>
+<kw name="Click log in button" owner="login_page">
+<kw name="Click on ${LOGIN_BTN_ELE} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:58:55.684518" elapsed="0.018931"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T10:58:55.703449" elapsed="0.025951"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:58:55.729400" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:58:55.729400" elapsed="1.467805"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T10:58:55.684518" elapsed="1.512687"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:58:55.683502" elapsed="1.513703"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:58:55.683502" elapsed="1.513703"/>
 </kw>
 <kw name="Search with the BALL" owner="search.pageobject" source_name="Search with the ${CONTENT}">
 <kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:14.825250" elapsed="0.140981"/>
+<status status="PASS" start="2024-05-16T10:58:57.199177" elapsed="0.052049"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:14.966231" elapsed="0.048868"/>
+<status status="PASS" start="2024-05-16T10:58:57.251226" elapsed="0.041935"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:15.016097" level="INFO">Typing text 'BALL' into text field 'css:.instasearch-term'.</msg>
+<msg time="2024-05-16T10:58:57.293161" level="INFO">Typing text 'BALL' into text field 'css:.instasearch-term'.</msg>
 <arg>${LOCATOR}</arg>
 <arg>${TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:15.015099" elapsed="0.089857"/>
+<status status="PASS" start="2024-05-16T10:58:57.293161" elapsed="0.128438"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:14.825250" elapsed="0.279706"/>
+<status status="PASS" start="2024-05-16T10:58:57.198153" elapsed="0.223446"/>
 </kw>
 <kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
 <kw name="Click on the web element" owner="base_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:15.105949" elapsed="0.048394"/>
+<status status="PASS" start="2024-05-16T10:58:57.422596" elapsed="0.034907"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:38:15.157349" elapsed="0.034889"/>
+<status status="PASS" start="2024-05-16T10:58:57.457503" elapsed="0.060837"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:15.193234" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<msg time="2024-05-16T10:58:57.518340" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:15.193234" elapsed="0.592678"/>
+<status status="PASS" start="2024-05-16T10:58:57.518340" elapsed="1.074227"/>
 </kw>
 <arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:38:15.104956" elapsed="0.680956"/>
+<status status="PASS" start="2024-05-16T10:58:57.422596" elapsed="1.169971"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:15.104956" elapsed="0.680956"/>
+<status status="PASS" start="2024-05-16T10:58:57.422596" elapsed="1.169971"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:14.824610" elapsed="0.961302"/>
+<status status="PASS" start="2024-05-16T10:58:57.198153" elapsed="1.395413"/>
 </kw>
 <kw name="Verify that user search success" owner="search.pageobject">
 <kw name="Verify a case" owner="base_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:15.801868" elapsed="0.483002"/>
+<status status="PASS" start="2024-05-16T10:58:58.595560" elapsed="0.079786"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:16.298833" level="INFO">Current page contains text 'Search result for'.</msg>
+<msg time="2024-05-16T10:58:58.690306" level="INFO">Current page contains text 'Search result for'.</msg>
 <arg>${TEXT}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-05-13T11:38:16.284870" elapsed="0.013963"/>
+<status status="PASS" start="2024-05-16T10:58:58.675346" elapsed="0.014960"/>
 </kw>
 <arg>${SUCCESS_TITLE}</arg>
-<arg>${SUCCESS_TITLE_CSS}</arg>
-<status status="PASS" start="2024-05-13T11:38:15.801868" elapsed="0.496965"/>
+<arg>${SUCCESS_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T10:58:58.595560" elapsed="0.094746"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:15.800874" elapsed="0.497959"/>
+<status status="PASS" start="2024-05-16T10:58:58.594573" elapsed="0.095733"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-13T11:38:16.299830" elapsed="2.285678"/>
+<status status="PASS" start="2024-05-16T10:58:58.691261" elapsed="2.335409"/>
 </kw>
-<tag>High</tag>
-<tag>Search</tag>
+<tag>High,Search</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2024-05-13T11:38:08.966834" elapsed="9.619680"/>
+<status status="PASS" start="2024-05-16T10:58:48.259836" elapsed="12.768480"/>
 </test>
-<test id="s1-s1-t3" name="Verify that the user's search will fail with special characters when the user is not logged into the system" line="18">
-<kw name="Access to ${URL_BASE}" owner="base_page" source_name="Access to ${URL}">
+<test id="s1-s1-t3" name="Verify that the user's search will fail with special characters when the user is logged into the system" line="23">
+<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:18.594707" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com'.</msg>
+<msg time="2024-05-16T10:59:01.036267" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-13T11:38:18.593710" elapsed="2.588301"/>
+<status status="PASS" start="2024-05-16T10:59:01.035270" elapsed="5.457088"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-13T11:38:21.183010" elapsed="3.296156"/>
+<status status="PASS" start="2024-05-16T10:59:06.493349" elapsed="0.075583"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:18.592702" elapsed="5.886464"/>
+<status status="PASS" start="2024-05-16T10:59:01.034234" elapsed="5.534698"/>
+</kw>
+<kw name="Input username" owner="login_page">
+<kw name="Input ${TEXT} For ${USERNAME_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:06.573044" elapsed="0.093875"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:06.666919" elapsed="0.087767"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:06.754686" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:06.754686" elapsed="0.111017"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:06.571927" elapsed="0.293776"/>
+</kw>
+<arg>${USER_NAME_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T10:59:06.569926" elapsed="0.295777"/>
+</kw>
+<kw name="Input pass" owner="login_page">
+<kw name="Input ${TEXT} For ${PASSWORD_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:06.867698" elapsed="0.032912"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:06.900610" elapsed="0.037899"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:06.939507" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:06.938509" elapsed="0.114783"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:06.866701" elapsed="0.186591"/>
+</kw>
+<arg>${PASS_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T10:59:06.866701" elapsed="0.186591"/>
+</kw>
+<kw name="Click log in button" owner="login_page">
+<kw name="Click on ${LOGIN_BTN_ELE} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:07.055310" elapsed="0.017929"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T10:59:07.073239" elapsed="0.021941"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:07.096178" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:07.096178" elapsed="1.141094"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T10:59:07.055310" elapsed="1.181962"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:07.054314" elapsed="1.182958"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:07.054314" elapsed="1.182958"/>
 </kw>
 <kw name="Search with the #@!" owner="search.pageobject" source_name="Search with the ${CONTENT}">
 <kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:24.482085" elapsed="0.051861"/>
+<status status="PASS" start="2024-05-16T10:59:08.239290" elapsed="0.037902"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:24.533946" elapsed="0.051097"/>
+<status status="PASS" start="2024-05-16T10:59:08.277192" elapsed="0.049576"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:24.585043" level="INFO">Typing text '#@!' into text field 'css:.instasearch-term'.</msg>
+<msg time="2024-05-16T10:59:08.327759" level="INFO">Typing text '#@!' into text field 'css:.instasearch-term'.</msg>
 <arg>${LOCATOR}</arg>
 <arg>${TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:24.585043" elapsed="0.103736"/>
+<status status="PASS" start="2024-05-16T10:59:08.326768" elapsed="0.158573"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:24.481087" elapsed="0.207692"/>
+<status status="PASS" start="2024-05-16T10:59:08.238274" elapsed="0.248064"/>
 </kw>
 <kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
 <kw name="Click on the web element" owner="base_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:24.689777" elapsed="0.047871"/>
+<status status="PASS" start="2024-05-16T10:59:08.487340" elapsed="0.045872"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:38:24.737648" elapsed="0.051861"/>
+<status status="PASS" start="2024-05-16T10:59:08.533212" elapsed="0.050864"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:24.789509" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<msg time="2024-05-16T10:59:08.585074" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:24.789509" elapsed="0.506148"/>
+<status status="PASS" start="2024-05-16T10:59:08.585074" elapsed="0.477444"/>
 </kw>
 <arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:38:24.689777" elapsed="0.605880"/>
+<status status="PASS" start="2024-05-16T10:59:08.486338" elapsed="0.576180"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:24.688779" elapsed="0.606878"/>
+<status status="PASS" start="2024-05-16T10:59:08.486338" elapsed="0.577178"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:24.480090" elapsed="0.815567"/>
+<status status="PASS" start="2024-05-16T10:59:08.238274" elapsed="0.825242"/>
 </kw>
 <kw name="Verify that user search fail when it did not match any products" owner="search.pageobject">
 <kw name="Verify a case" owner="base_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:25.322583" elapsed="0.382603"/>
+<status status="PASS" start="2024-05-16T10:59:09.080469" elapsed="0.646370"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:25.719147" level="INFO">Current page contains text 'Your search did not match any products.'.</msg>
+<msg time="2024-05-16T10:59:09.751235" level="INFO">Current page contains text 'Your search did not match any products.'.</msg>
 <arg>${TEXT}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-05-13T11:38:25.705186" elapsed="0.013961"/>
+<status status="PASS" start="2024-05-16T10:59:09.726839" elapsed="0.024396"/>
 </kw>
 <arg>${ALERT_TITLE}</arg>
-<arg>${ALERT_TITLE_CSS}</arg>
-<status status="PASS" start="2024-05-13T11:38:25.321586" elapsed="0.397561"/>
+<arg>${ALERT_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T10:59:09.079472" elapsed="0.671763"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:25.321586" elapsed="0.397561"/>
+<status status="PASS" start="2024-05-16T10:59:09.078473" elapsed="0.672762"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-13T11:38:25.720145" elapsed="2.306906"/>
+<status status="PASS" start="2024-05-16T10:59:09.752216" elapsed="2.294565"/>
 </kw>
-<tag>High</tag>
-<tag>Search</tag>
+<tag>High,Search</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2024-05-13T11:38:18.590541" elapsed="9.437712"/>
+<status status="PASS" start="2024-05-16T10:59:01.032239" elapsed="11.015841"/>
 </test>
-<test id="s1-s1-t4" name="Verify that the user's search will fail with whitespace characters when the user is not logged into the system" line="23">
-<kw name="Access to ${URL_BASE}" owner="base_page" source_name="Access to ${URL}">
+<test id="s1-s1-t4" name="Verify that the user's search will fail with whitespace characters when the user is logged into the system" line="31">
+<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:28.036301" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com'.</msg>
+<msg time="2024-05-16T10:59:12.056243" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-13T11:38:28.035306" elapsed="5.533870"/>
+<status status="PASS" start="2024-05-16T10:59:12.055246" elapsed="7.122289"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-13T11:38:33.570041" elapsed="0.089758"/>
+<status status="PASS" start="2024-05-16T10:59:19.177535" elapsed="0.112700"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:28.034297" elapsed="5.625502"/>
+<status status="PASS" start="2024-05-16T10:59:12.054250" elapsed="7.235985"/>
+</kw>
+<kw name="Input username" owner="login_page">
+<kw name="Input ${TEXT} For ${USERNAME_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:19.296227" elapsed="0.101729"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:19.398942" elapsed="0.053858"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:19.452800" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:19.452800" elapsed="0.109613"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:19.294247" elapsed="0.268166"/>
+</kw>
+<arg>${USER_NAME_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T10:59:19.292237" elapsed="0.271174"/>
+</kw>
+<kw name="Input pass" owner="login_page">
+<kw name="Input ${TEXT} For ${PASSWORD_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:19.564408" elapsed="0.032913"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:19.597321" elapsed="0.034912"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:19.632233" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:19.632233" elapsed="0.108703"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:19.563411" elapsed="0.177525"/>
+</kw>
+<arg>${PASS_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T10:59:19.563411" elapsed="0.177525"/>
+</kw>
+<kw name="Click log in button" owner="login_page">
+<kw name="Click on ${LOGIN_BTN_ELE} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:19.743016" elapsed="0.018925"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T10:59:19.762939" elapsed="0.017953"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:19.781889" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:19.781889" elapsed="1.588572"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T10:59:19.743016" elapsed="1.627445"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:19.741991" elapsed="1.629515"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:19.741991" elapsed="1.629515"/>
 </kw>
 <kw name="Search with the ${Empty}" owner="search.pageobject" source_name="Search with the ${CONTENT}">
 <kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:33.677753" elapsed="0.155567"/>
+<status status="PASS" start="2024-05-16T10:59:21.374456" elapsed="0.038595"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:33.833320" elapsed="0.060837"/>
+<status status="PASS" start="2024-05-16T10:59:21.413051" elapsed="0.035967"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:33.894157" level="INFO">Typing text '\' into text field 'css:.instasearch-term'.</msg>
+<msg time="2024-05-16T10:59:21.449018" level="INFO">Typing text '\' into text field 'css:.instasearch-term'.</msg>
 <arg>${LOCATOR}</arg>
 <arg>${TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:33.894157" elapsed="0.111579"/>
+<status status="PASS" start="2024-05-16T10:59:21.449018" elapsed="0.087768"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:33.675742" elapsed="0.329994"/>
+<status status="PASS" start="2024-05-16T10:59:21.373459" elapsed="0.163327"/>
 </kw>
 <kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
 <kw name="Click on the web element" owner="base_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:34.006733" elapsed="0.052861"/>
+<status status="PASS" start="2024-05-16T10:59:21.538781" elapsed="0.042884"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:38:34.060590" elapsed="0.058841"/>
+<status status="PASS" start="2024-05-16T10:59:21.582662" elapsed="0.039894"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:34.120429" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<msg time="2024-05-16T10:59:21.625547" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:34.120429" elapsed="1.097434"/>
+<status status="PASS" start="2024-05-16T10:59:21.622556" elapsed="0.991916"/>
 </kw>
 <arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:38:34.006733" elapsed="1.211130"/>
+<status status="PASS" start="2024-05-16T10:59:21.537785" elapsed="1.076687"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:34.005736" elapsed="1.212127"/>
+<status status="PASS" start="2024-05-16T10:59:21.536786" elapsed="1.078715"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:33.673754" elapsed="1.544109"/>
+<status status="PASS" start="2024-05-16T10:59:21.372462" elapsed="1.243039"/>
 </kw>
 <kw name="Verify users search fail when data is whitespace" owner="search.pageobject">
 <kw name="Verify a case" owner="base_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOCATOR}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:35.218861" elapsed="0.030703"/>
+<status status="PASS" start="2024-05-16T10:59:22.616467" elapsed="0.030917"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:35.271475" level="INFO">Current page contains text 'The minimum length for the search term is 2 characters.'.</msg>
+<msg time="2024-05-16T10:59:22.664028" level="INFO">Current page contains text 'The minimum length for the search term is 2 characters.'.</msg>
 <arg>${TEXT}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-05-13T11:38:35.249564" elapsed="0.021911"/>
+<status status="PASS" start="2024-05-16T10:59:22.648383" elapsed="0.016676"/>
 </kw>
 <arg>${DANGER_TITLE}</arg>
-<arg>${DANGER_TITLE_CSS}</arg>
-<status status="PASS" start="2024-05-13T11:38:35.218861" elapsed="0.052614"/>
+<arg>${DANGER_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T10:59:22.616467" elapsed="0.048592"/>
 </kw>
-<status status="PASS" start="2024-05-13T11:38:35.218861" elapsed="0.052614"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-13T11:38:35.272257" elapsed="2.301091"/>
-</kw>
-<tag>High</tag>
-<tag>Search</tag>
-<status status="PASS" start="2024-05-13T11:38:28.032387" elapsed="9.542966"/>
-</test>
-<test id="s1-s1-t5" name="Verify that user can search the content with lowercase characters when user is logged into the system" line="29">
-<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:37.582730" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-13T11:38:37.581733" elapsed="4.714618"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-13T11:38:42.297352" elapsed="0.067822"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:37.580701" elapsed="4.784473"/>
-</kw>
-<kw name="Input username" owner="login_page">
-<kw name="Input ${TEXT} For ${USERNAME_CSS}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:42.372159" elapsed="0.100724"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:42.473886" elapsed="0.110699"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:42.585582" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:42.585582" elapsed="0.160285"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:42.370172" elapsed="0.375695"/>
-</kw>
-<arg>${USER_NAME_RIGHT}</arg>
-<status status="PASS" start="2024-05-13T11:38:42.368167" elapsed="0.377700"/>
-</kw>
-<kw name="Input pass" owner="login_page">
-<kw name="Input ${TEXT} For ${PASSWORD_CSS}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:42.746859" elapsed="0.030917"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:42.777776" elapsed="0.043883"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:42.821659" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:42.821659" elapsed="0.107582"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:42.746859" elapsed="0.182382"/>
-</kw>
-<arg>${PASS_RIGHT}</arg>
-<status status="PASS" start="2024-05-13T11:38:42.745867" elapsed="0.183374"/>
-</kw>
-<kw name="Click log in button" owner="login_page">
-<kw name="Click on ${LOGIN_BTN_CSS} button" owner="base_page" source_name="Click on ${LOCATOR} button">
-<kw name="Click on the web element" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:42.931236" elapsed="0.023935"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:38:42.955171" elapsed="0.024934"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:42.981126" level="INFO">Clicking element 'css:.btn-login'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:42.981126" elapsed="1.575516"/>
-</kw>
-<arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:38:42.931236" elapsed="1.626413"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:42.930243" elapsed="1.627406"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:42.930243" elapsed="1.627406"/>
-</kw>
-<kw name="Search with the ball" owner="search.pageobject" source_name="Search with the ${CONTENT}">
-<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:44.560636" elapsed="0.079193"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:44.639829" elapsed="0.050436"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:44.690265" level="INFO">Typing text 'ball' into text field 'css:.instasearch-term'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:44.690265" elapsed="0.101883"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:44.559639" elapsed="0.232509"/>
-</kw>
-<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
-<kw name="Click on the web element" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:44.793145" elapsed="0.053855"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:38:44.847000" elapsed="0.053862"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:44.901854" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:44.900862" elapsed="1.443081"/>
-</kw>
-<arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:38:44.793145" elapsed="1.550798"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:44.793145" elapsed="1.550798"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:44.559639" elapsed="1.785296"/>
-</kw>
-<kw name="Verify that user search success" owner="search.pageobject">
-<kw name="Verify a case" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:46.347895" elapsed="0.079416"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:46.451695" level="INFO">Current page contains text 'Search result for'.</msg>
-<arg>${TEXT}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-05-13T11:38:46.427311" elapsed="0.024384"/>
-</kw>
-<arg>${SUCCESS_TITLE}</arg>
-<arg>${SUCCESS_TITLE_CSS}</arg>
-<status status="PASS" start="2024-05-13T11:38:46.346930" elapsed="0.104765"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:46.345897" elapsed="0.105798"/>
+<status status="PASS" start="2024-05-16T10:59:22.615501" elapsed="0.049558"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-13T11:38:46.452728" elapsed="2.313906"/>
+<status status="PASS" start="2024-05-16T10:59:22.665059" elapsed="2.301035"/>
 </kw>
-<tag>High</tag>
-<tag>Search</tag>
-<tag>Smoke</tag>
-<status status="PASS" start="2024-05-13T11:38:37.578704" elapsed="11.189282"/>
+<tag>High,Search</tag>
+<status status="PASS" start="2024-05-16T10:59:12.052216" elapsed="12.915880"/>
 </test>
-<test id="s1-s1-t6" name="Verify that user can search the content with uppercase characters when user is logged into the system" line="37">
-<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:48.776013" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-13T11:38:48.775016" elapsed="4.940074"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-13T11:38:53.716098" elapsed="0.068085"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:48.774007" elapsed="5.010176"/>
-</kw>
-<kw name="Input username" owner="login_page">
-<kw name="Input ${TEXT} For ${USERNAME_CSS}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:53.786166" elapsed="0.116978"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:53.903144" elapsed="0.098157"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:54.001301" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:54.001301" elapsed="0.132498"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:53.786166" elapsed="0.347633"/>
-</kw>
-<arg>${USER_NAME_RIGHT}</arg>
-<status status="PASS" start="2024-05-13T11:38:53.785168" elapsed="0.348631"/>
-</kw>
-<kw name="Input pass" owner="login_page">
-<kw name="Input ${TEXT} For ${PASSWORD_CSS}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:54.136796" elapsed="0.045871"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:54.182667" elapsed="0.047887"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:54.230554" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:54.230554" elapsed="0.110622"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:54.136796" elapsed="0.204380"/>
-</kw>
-<arg>${PASS_RIGHT}</arg>
-<status status="PASS" start="2024-05-13T11:38:54.135800" elapsed="0.205376"/>
-</kw>
-<kw name="Click log in button" owner="login_page">
-<kw name="Click on ${LOGIN_BTN_CSS} button" owner="base_page" source_name="Click on ${LOCATOR} button">
-<kw name="Click on the web element" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:54.343172" elapsed="0.025929"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:38:54.369101" elapsed="0.027375"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:54.397496" level="INFO">Clicking element 'css:.btn-login'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:54.396476" elapsed="1.575311"/>
-</kw>
-<arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:38:54.343172" elapsed="1.628615"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:54.343172" elapsed="1.628615"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:54.342175" elapsed="1.629612"/>
-</kw>
-<kw name="Search with the BALL" owner="search.pageobject" source_name="Search with the ${CONTENT}">
-<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:55.973796" elapsed="0.065928"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:56.040722" elapsed="0.036912"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:56.077634" level="INFO">Typing text 'BALL' into text field 'css:.instasearch-term'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:56.077634" elapsed="0.113688"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:55.973796" elapsed="0.217526"/>
-</kw>
-<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
-<kw name="Click on the web element" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:56.193314" elapsed="0.044880"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:38:56.239216" elapsed="0.049843"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:56.289059" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:38:56.289059" elapsed="0.583878"/>
-</kw>
-<arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:38:56.192317" elapsed="0.680620"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:56.192317" elapsed="0.680620"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:55.972797" elapsed="0.900140"/>
-</kw>
-<kw name="Verify that user search success" owner="search.pageobject">
-<kw name="Verify a case" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:38:56.882910" elapsed="0.710738"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:57.614574" level="INFO">Current page contains text 'Search result for'.</msg>
-<arg>${TEXT}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-05-13T11:38:57.593648" elapsed="0.020926"/>
-</kw>
-<arg>${SUCCESS_TITLE}</arg>
-<arg>${SUCCESS_TITLE_CSS}</arg>
-<status status="PASS" start="2024-05-13T11:38:56.882910" elapsed="0.731664"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:56.882910" elapsed="0.731664"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-13T11:38:57.615571" elapsed="2.319513"/>
-</kw>
-<tag>High</tag>
-<tag>Search</tag>
-<tag>Smoke</tag>
-<status status="PASS" start="2024-05-13T11:38:48.772172" elapsed="11.164254"/>
-</test>
-<test id="s1-s1-t7" name="Verify that the user's search will fail with special characters when the user is logged into the system" line="45">
-<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:38:59.944580" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-13T11:38:59.943582" elapsed="4.554687"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-13T11:39:04.498269" elapsed="0.078033"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:38:59.942556" elapsed="4.633746"/>
-</kw>
-<kw name="Input username" owner="login_page">
-<kw name="Input ${TEXT} For ${USERNAME_CSS}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:04.587273" elapsed="0.071812"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:04.660081" elapsed="0.097735"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:04.758815" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:04.758815" elapsed="0.103624"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:04.586283" elapsed="0.276156"/>
-</kw>
-<arg>${USER_NAME_RIGHT}</arg>
-<status status="PASS" start="2024-05-13T11:39:04.586283" elapsed="0.276156"/>
-</kw>
-<kw name="Input pass" owner="login_page">
-<kw name="Input ${TEXT} For ${PASSWORD_CSS}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:04.864463" elapsed="0.023908"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:04.888371" elapsed="0.051865"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:04.940236" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:04.940236" elapsed="0.109702"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:04.863436" elapsed="0.187499"/>
-</kw>
-<arg>${PASS_RIGHT}</arg>
-<status status="PASS" start="2024-05-13T11:39:04.863436" elapsed="0.187499"/>
-</kw>
-<kw name="Click log in button" owner="login_page">
-<kw name="Click on ${LOGIN_BTN_CSS} button" owner="base_page" source_name="Click on ${LOCATOR} button">
-<kw name="Click on the web element" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:05.051932" elapsed="0.016957"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:39:05.068889" elapsed="0.019944"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:05.088833" level="INFO">Clicking element 'css:.btn-login'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:05.088833" elapsed="1.092390"/>
-</kw>
-<arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:39:05.051932" elapsed="1.129291"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:05.050935" elapsed="1.131288"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:05.050935" elapsed="1.131288"/>
-</kw>
-<kw name="Search with the #@!" owner="search.pageobject" source_name="Search with the ${CONTENT}">
-<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:06.183446" elapsed="0.022148"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:06.205594" elapsed="0.041126"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:06.246720" level="INFO">Typing text '#@!' into text field 'css:.instasearch-term'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:06.246720" elapsed="0.159948"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:06.182420" elapsed="0.224248"/>
-</kw>
-<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
-<kw name="Click on the web element" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:06.407661" elapsed="0.049866"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:39:06.458525" elapsed="0.053857"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:06.513380" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:06.513380" elapsed="0.825271"/>
-</kw>
-<arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:39:06.407661" elapsed="0.930990"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:06.406668" elapsed="0.931983"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:06.182420" elapsed="1.156231"/>
-</kw>
-<kw name="Verify that user search fail when it did not match any products" owner="search.pageobject">
-<kw name="Verify a case" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:07.340649" elapsed="0.035483"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:07.395372" level="INFO">Current page contains text 'Your search did not match any products.'.</msg>
-<arg>${TEXT}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-05-13T11:39:07.376132" elapsed="0.019240"/>
-</kw>
-<arg>${ALERT_TITLE}</arg>
-<arg>${ALERT_TITLE_CSS}</arg>
-<status status="PASS" start="2024-05-13T11:39:07.340649" elapsed="0.054723"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:07.339652" elapsed="0.055720"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-13T11:39:07.396379" elapsed="2.349391"/>
-</kw>
-<tag>High</tag>
-<tag>Search</tag>
-<tag>Smoke</tag>
-<status status="PASS" start="2024-05-13T11:38:59.940575" elapsed="9.806547"/>
-</test>
-<test id="s1-s1-t8" name="Verify that the user's search will fail with whitespace characters when the user is logged into the system" line="53">
-<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:09.755055" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-13T11:39:09.754059" elapsed="4.437603"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-13T11:39:14.192660" elapsed="0.060996"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:09.753051" elapsed="4.500605"/>
-</kw>
-<kw name="Input username" owner="login_page">
-<kw name="Input ${TEXT} For ${USERNAME_CSS}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:14.259640" elapsed="0.113695"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:14.373335" elapsed="0.093750"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:14.468082" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:14.468082" elapsed="0.105099"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:14.259640" elapsed="0.314568"/>
-</kw>
-<arg>${USER_NAME_RIGHT}</arg>
-<status status="PASS" start="2024-05-13T11:39:14.258642" elapsed="0.315566"/>
-</kw>
-<kw name="Input pass" owner="login_page">
-<kw name="Input ${TEXT} For ${PASSWORD_CSS}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:14.576179" elapsed="0.032906"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:14.609085" elapsed="0.041888"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:14.650973" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:14.650973" elapsed="0.118854"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:14.576179" elapsed="0.193648"/>
-</kw>
-<arg>${PASS_RIGHT}</arg>
-<status status="PASS" start="2024-05-13T11:39:14.575181" elapsed="0.194646"/>
-</kw>
-<kw name="Click log in button" owner="login_page">
-<kw name="Click on ${LOGIN_BTN_CSS} button" owner="base_page" source_name="Click on ${LOCATOR} button">
-<kw name="Click on the web element" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:14.771848" elapsed="0.018932"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:39:14.791777" elapsed="0.020891"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:14.813697" level="INFO">Clicking element 'css:.btn-login'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:14.812668" elapsed="1.130327"/>
-</kw>
-<arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:39:14.770828" elapsed="1.173173"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:14.770828" elapsed="1.173173"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:14.770828" elapsed="1.173173"/>
-</kw>
-<kw name="Search with the ${Empty}" owner="search.pageobject" source_name="Search with the ${CONTENT}">
-<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:15.945986" elapsed="0.020258"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:15.966244" elapsed="0.036901"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:16.003145" level="INFO">Typing text '\' into text field 'css:.instasearch-term'.</msg>
-<arg>${LOCATOR}</arg>
-<arg>${TEXT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:16.003145" elapsed="0.088763"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:15.945986" elapsed="0.145922"/>
-</kw>
-<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
-<kw name="Click on the web element" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:16.094908" elapsed="0.061826"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-13T11:39:16.157732" elapsed="0.053856"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:16.212585" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-13T11:39:16.211588" elapsed="0.338732"/>
-</kw>
-<arg>${LOCATOR}</arg>
-<status status="PASS" start="2024-05-13T11:39:16.093908" elapsed="0.457409"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:16.092907" elapsed="0.458410"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:15.945009" elapsed="0.606308"/>
-</kw>
-<kw name="Verify users search fail when data is whitespace" owner="search.pageobject">
-<kw name="Verify a case" owner="base_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOCATOR}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-13T11:39:16.562290" elapsed="0.594387"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-05-13T11:39:17.179578" level="INFO">Current page contains text 'The minimum length for the search term is 2 characters.'.</msg>
-<arg>${TEXT}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-05-13T11:39:17.157713" elapsed="0.021865"/>
-</kw>
-<arg>${DANGER_TITLE}</arg>
-<arg>${DANGER_TITLE_CSS}</arg>
-<status status="PASS" start="2024-05-13T11:39:16.560294" elapsed="0.619284"/>
-</kw>
-<status status="PASS" start="2024-05-13T11:39:16.559296" elapsed="0.620282"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-13T11:39:17.180574" elapsed="2.306483"/>
-</kw>
-<tag>High</tag>
-<tag>Search</tag>
-<status status="PASS" start="2024-05-13T11:39:09.750946" elapsed="9.737061"/>
-</test>
-<status status="PASS" start="2024-05-13T11:37:59.665624" elapsed="79.824451"/>
+<status status="PASS" start="2024-05-16T10:58:31.371421" elapsed="53.601391"/>
 </suite>
-<status status="PASS" start="2024-05-13T11:37:59.630718" elapsed="79.860601"/>
+<suite id="s1-s2" name="Search Suite" source="C:\Users\truc.tran\Desktop\Graduation_thesis\tests\search_suite.robot">
+<test id="s1-s2-t1" name="Verify that user can search the content with lowercase characters when user is not logged into the system" line="8">
+<kw name="Access to ${URL_BASE}" owner="base_page" source_name="Access to ${URL}">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:25.016253" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T10:59:25.015273" elapsed="5.098975"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-16T10:59:30.114248" elapsed="0.076810"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:25.015273" elapsed="5.176782"/>
+</kw>
+<kw name="Search with the ball" owner="search.pageobject" source_name="Search with the ${CONTENT}">
+<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:30.198029" elapsed="0.123357"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:30.322385" elapsed="0.062831"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:30.386213" level="INFO">Typing text 'ball' into text field 'css:.instasearch-term'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:30.386213" elapsed="0.094347"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:30.197035" elapsed="0.283525"/>
+</kw>
+<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:30.481557" elapsed="0.044880"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T10:59:30.526437" elapsed="0.037900"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:30.564337" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:30.564337" elapsed="0.980193"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T10:59:30.481557" elapsed="1.062973"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:30.480560" elapsed="1.063970"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:30.195046" elapsed="1.349484"/>
+</kw>
+<kw name="Verify that user search success" owner="search.pageobject">
+<kw name="Verify a case" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:31.545526" elapsed="0.035724"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:31.599851" level="INFO">Current page contains text 'Search result for'.</msg>
+<arg>${TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-16T10:59:31.581250" elapsed="0.018601"/>
+</kw>
+<arg>${SUCCESS_TITLE}</arg>
+<arg>${SUCCESS_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T10:59:31.545526" elapsed="0.054325"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:31.545526" elapsed="0.054325"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-16T10:59:31.600819" elapsed="2.304240"/>
+</kw>
+<tag>High,Search</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-05-16T10:59:25.014228" elapsed="8.892064"/>
+</test>
+<test id="s1-s2-t2" name="Verify that user can search the content with uppercase characters when user is not logged into the system" line="13">
+<kw name="Access to ${URL_BASE}" owner="base_page" source_name="Access to ${URL}">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:33.914451" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T10:59:33.913453" elapsed="5.190838"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-16T10:59:39.104291" elapsed="0.066942"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:33.912416" elapsed="5.258817"/>
+</kw>
+<kw name="Search with the BALL" owner="search.pageobject" source_name="Search with the ${CONTENT}">
+<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:39.174226" elapsed="0.159573"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:39.333799" elapsed="0.053650"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:39.387449" level="INFO">Typing text 'BALL' into text field 'css:.instasearch-term'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:39.387449" elapsed="0.094241"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:39.173228" elapsed="0.308462"/>
+</kw>
+<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:39.482689" elapsed="0.037899"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T10:59:39.520588" elapsed="0.039892"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:39.561478" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:39.561478" elapsed="0.568921"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T10:59:39.482689" elapsed="0.647710"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:39.481690" elapsed="0.648709"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:39.173228" elapsed="0.957171"/>
+</kw>
+<kw name="Verify that user search success" owner="search.pageobject">
+<kw name="Verify a case" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:40.135386" elapsed="0.687048"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:40.840778" level="INFO">Current page contains text 'Search result for'.</msg>
+<arg>${TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-16T10:59:40.822434" elapsed="0.018344"/>
+</kw>
+<arg>${SUCCESS_TITLE}</arg>
+<arg>${SUCCESS_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T10:59:40.135386" elapsed="0.705392"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:40.135386" elapsed="0.705392"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-16T10:59:40.841774" elapsed="2.314731"/>
+</kw>
+<tag>High,Search</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-05-16T10:59:33.910431" elapsed="9.247295"/>
+</test>
+<test id="s1-s2-t3" name="Verify that the user's search will fail with special characters when the user is not logged into the system" line="18">
+<kw name="Access to ${URL_BASE}" owner="base_page" source_name="Access to ${URL}">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:43.165925" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T10:59:43.164927" elapsed="5.104567"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-16T10:59:48.269494" elapsed="0.078783"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:43.163895" elapsed="5.185387"/>
+</kw>
+<kw name="Search with the #@!" owner="search.pageobject" source_name="Search with the ${CONTENT}">
+<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:48.355260" elapsed="0.213095"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:48.568355" elapsed="0.039901"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:48.609254" level="INFO">Typing text '#@!' into text field 'css:.instasearch-term'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:48.608256" elapsed="0.090606"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:48.354268" elapsed="0.344594"/>
+</kw>
+<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:48.699859" elapsed="0.038902"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T10:59:48.739753" elapsed="0.036901"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:48.777652" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T10:59:48.776654" elapsed="0.830054"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T10:59:48.698862" elapsed="0.907846"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:48.698862" elapsed="0.908841"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:48.352330" elapsed="1.255373"/>
+</kw>
+<kw name="Verify that user search fail when it did not match any products" owner="search.pageobject">
+<kw name="Verify a case" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T10:59:49.616679" elapsed="0.020944"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:49.653587" level="INFO">Current page contains text 'Your search did not match any products.'.</msg>
+<arg>${TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-16T10:59:49.637623" elapsed="0.015964"/>
+</kw>
+<arg>${ALERT_TITLE}</arg>
+<arg>${ALERT_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T10:59:49.615681" elapsed="0.037906"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:49.615681" elapsed="0.037906"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-16T10:59:49.653587" elapsed="2.299895"/>
+</kw>
+<tag>High,Search</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-05-16T10:59:43.161899" elapsed="8.793591"/>
+</test>
+<test id="s1-s2-t4" name="Verify that the user's search will fail with whitespace characters when the user is not logged into the system" line="23">
+<kw name="Access to ${URL_BASE}" owner="base_page" source_name="Access to ${URL}">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T10:59:51.963190" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T10:59:51.962190" elapsed="9.088893"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-16T11:00:01.051083" elapsed="0.079972"/>
+</kw>
+<status status="PASS" start="2024-05-16T10:59:51.961163" elapsed="9.170906"/>
+</kw>
+<kw name="Search with the ${Empty}" owner="search.pageobject" source_name="Search with the ${CONTENT}">
+<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:01.140045" elapsed="0.158090"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:01.299130" elapsed="0.048865"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:01.348991" level="INFO">Typing text '\' into text field 'css:.instasearch-term'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:01.347995" elapsed="0.082333"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:01.139034" elapsed="0.291294"/>
+</kw>
+<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:01.431320" elapsed="0.033909"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T11:00:01.465229" elapsed="0.037900"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:01.504131" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:01.503129" elapsed="0.343137"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T11:00:01.430328" elapsed="0.415938"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:01.430328" elapsed="0.416934"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:01.137039" elapsed="0.710223"/>
+</kw>
+<kw name="Verify users search fail when data is whitespace" owner="search.pageobject">
+<kw name="Verify a case" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:01.854244" elapsed="0.639137"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:02.541602" level="INFO">Current page contains text 'The minimum length for the search term is 2 characters.'.</msg>
+<arg>${TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-16T11:00:02.494374" elapsed="0.047228"/>
+</kw>
+<arg>${DANGER_TITLE}</arg>
+<arg>${DANGER_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T11:00:01.853247" elapsed="0.688355"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:01.852249" elapsed="0.690389"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-16T11:00:02.543603" elapsed="2.266612"/>
+</kw>
+<tag>High,Search</tag>
+<status status="PASS" start="2024-05-16T10:59:51.959162" elapsed="12.852501"/>
+</test>
+<test id="s1-s2-t5" name="Verify that user can search the content with lowercase characters when user is logged into the system" line="29">
+<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:04.820052" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T11:00:04.819055" elapsed="4.622678"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-16T11:00:09.441733" elapsed="0.086730"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:04.818022" elapsed="4.710441"/>
+</kw>
+<kw name="Input username" owner="login_page">
+<kw name="Input ${TEXT} For ${USERNAME_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:09.532465" elapsed="0.102720"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:09.636176" elapsed="0.081780"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:09.718954" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:09.718954" elapsed="0.101781"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:09.531456" elapsed="0.289279"/>
+</kw>
+<arg>${USER_NAME_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T11:00:09.530473" elapsed="0.290262"/>
+</kw>
+<kw name="Input pass" owner="login_page">
+<kw name="Input ${TEXT} For ${PASSWORD_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:09.821740" elapsed="0.023927"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:09.845667" elapsed="0.053858"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:09.900528" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:09.900528" elapsed="0.113351"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:09.821740" elapsed="0.193146"/>
+</kw>
+<arg>${PASS_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T11:00:09.821740" elapsed="0.193146"/>
+</kw>
+<kw name="Click log in button" owner="login_page">
+<kw name="Click on ${LOGIN_BTN_ELE} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:10.015879" elapsed="0.018925"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T11:00:10.034804" elapsed="0.020963"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:10.055767" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:10.055767" elapsed="1.146596"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T11:00:10.015879" elapsed="1.186484"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:10.014886" elapsed="1.187477"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:10.014886" elapsed="1.187477"/>
+</kw>
+<kw name="Search with the ball" owner="search.pageobject" source_name="Search with the ${CONTENT}">
+<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:11.203353" elapsed="0.024664"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:11.228017" elapsed="0.041863"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:11.269880" level="INFO">Typing text 'ball' into text field 'css:.instasearch-term'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:11.269880" elapsed="0.131658"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:11.203353" elapsed="0.198185"/>
+</kw>
+<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:11.402527" elapsed="0.070810"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T11:00:11.474335" elapsed="0.046874"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:11.522207" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:11.521209" elapsed="1.006673"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T11:00:11.402527" elapsed="1.125355"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:11.401538" elapsed="1.126344"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:11.203353" elapsed="1.324529"/>
+</kw>
+<kw name="Verify that user search success" owner="search.pageobject">
+<kw name="Verify a case" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:12.543843" elapsed="0.072800"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:12.630415" level="INFO">Current page contains text 'Search result for'.</msg>
+<arg>${TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-16T11:00:12.616643" elapsed="0.013772"/>
+</kw>
+<arg>${SUCCESS_TITLE}</arg>
+<arg>${SUCCESS_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T11:00:12.542851" elapsed="0.087564"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:12.538854" elapsed="0.091561"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-16T11:00:12.631445" elapsed="2.314211"/>
+</kw>
+<tag>High,Search</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-05-16T11:00:04.816026" elapsed="10.130899"/>
+</test>
+<test id="s1-s2-t6" name="Verify that user can search the content with uppercase characters when user is logged into the system" line="37">
+<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:14.955142" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T11:00:14.954146" elapsed="9.518423"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-16T11:00:24.472569" elapsed="0.085461"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:14.953148" elapsed="9.604882"/>
+</kw>
+<kw name="Input username" owner="login_page">
+<kw name="Input ${TEXT} For ${USERNAME_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:24.563020" elapsed="0.108706"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:24.671726" elapsed="0.065825"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:24.737551" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:24.737551" elapsed="0.108122"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:24.561028" elapsed="0.284645"/>
+</kw>
+<arg>${USER_NAME_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T11:00:24.560026" elapsed="0.285647"/>
+</kw>
+<kw name="Input pass" owner="login_page">
+<kw name="Input ${TEXT} For ${PASSWORD_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:24.846671" elapsed="0.029920"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:24.877589" elapsed="0.036901"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:24.914490" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:24.914490" elapsed="0.106715"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:24.846671" elapsed="0.174534"/>
+</kw>
+<arg>${PASS_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T11:00:24.846671" elapsed="0.174534"/>
+</kw>
+<kw name="Click log in button" owner="login_page">
+<kw name="Click on ${LOGIN_BTN_ELE} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:25.023201" elapsed="0.018948"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T11:00:25.042149" elapsed="0.018949"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:25.062096" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:25.061098" elapsed="1.711756"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T11:00:25.022203" elapsed="1.750651"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:25.022203" elapsed="1.750651"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:25.022203" elapsed="1.750651"/>
+</kw>
+<kw name="Search with the BALL" owner="search.pageobject" source_name="Search with the ${CONTENT}">
+<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:26.775816" elapsed="0.037898"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:26.813714" elapsed="0.039498"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:26.854210" level="INFO">Typing text 'BALL' into text field 'css:.instasearch-term'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:26.854210" elapsed="0.094868"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:26.774819" elapsed="0.174259"/>
+</kw>
+<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:26.950075" elapsed="0.051862"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T11:00:27.001937" elapsed="0.037902"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:27.041837" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:27.039839" elapsed="1.204865"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T11:00:26.950075" elapsed="1.294629"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:26.949078" elapsed="1.295626"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:26.773821" elapsed="1.470883"/>
+</kw>
+<kw name="Verify that user search success" owner="search.pageobject">
+<kw name="Verify a case" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:28.246711" elapsed="0.032902"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:28.351419" level="INFO">Current page contains text 'Search result for'.</msg>
+<arg>${TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-16T11:00:28.280615" elapsed="0.070804"/>
+</kw>
+<arg>${SUCCESS_TITLE}</arg>
+<arg>${SUCCESS_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T11:00:28.245701" elapsed="0.105718"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:28.245701" elapsed="0.105718"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-16T11:00:28.352416" elapsed="2.316180"/>
+</kw>
+<tag>High,Search</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-05-16T11:00:14.951117" elapsed="15.719483"/>
+</test>
+<test id="s1-s2-t7" name="Verify that the user's search will fail with special characters when the user is logged into the system" line="45">
+<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:30.677990" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T11:00:30.677035" elapsed="5.187763"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-16T11:00:35.864798" elapsed="0.081891"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:30.676034" elapsed="5.271656"/>
+</kw>
+<kw name="Input username" owner="login_page">
+<kw name="Input ${TEXT} For ${USERNAME_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:35.950678" elapsed="0.085766"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:36.037455" elapsed="0.085758"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:36.124214" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:36.123213" elapsed="0.101686"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:35.950678" elapsed="0.274221"/>
+</kw>
+<arg>${USER_NAME_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T11:00:35.949688" elapsed="0.275211"/>
+</kw>
+<kw name="Input pass" owner="login_page">
+<kw name="Input ${TEXT} For ${PASSWORD_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:36.225896" elapsed="0.021943"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:36.247839" elapsed="0.043882"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:36.291721" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:36.291721" elapsed="0.105718"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:36.225896" elapsed="0.172541"/>
+</kw>
+<arg>${PASS_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T11:00:36.225896" elapsed="0.172541"/>
+</kw>
+<kw name="Click log in button" owner="login_page">
+<kw name="Click on ${LOGIN_BTN_ELE} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:36.399433" elapsed="0.018950"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T11:00:36.418383" elapsed="0.019947"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:36.438330" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:36.438330" elapsed="1.147724"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T11:00:36.399433" elapsed="1.186621"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:36.398437" elapsed="1.187617"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:36.398437" elapsed="1.187617"/>
+</kw>
+<kw name="Search with the #@!" owner="search.pageobject" source_name="Search with the ${CONTENT}">
+<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:37.588048" elapsed="0.028637"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:37.616685" elapsed="0.048216"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:37.665897" level="INFO">Typing text '#@!' into text field 'css:.instasearch-term'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:37.664901" elapsed="0.090616"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:37.587051" elapsed="0.168466"/>
+</kw>
+<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:37.756533" elapsed="0.042867"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T11:00:37.799400" elapsed="0.044883"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:37.844283" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:37.844283" elapsed="0.547150"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T11:00:37.756533" elapsed="0.635900"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:37.755517" elapsed="0.636916"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:37.587051" elapsed="0.805382"/>
+</kw>
+<kw name="Verify that user search fail when it did not match any products" owner="search.pageobject">
+<kw name="Verify a case" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:38.404398" elapsed="0.589138"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:39.026763" level="INFO">Current page contains text 'Your search did not match any products.'.</msg>
+<arg>${TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-16T11:00:38.993536" elapsed="0.033227"/>
+</kw>
+<arg>${ALERT_TITLE}</arg>
+<arg>${ALERT_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T11:00:38.403399" elapsed="0.624414"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:38.401407" elapsed="0.626406"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-16T11:00:39.028765" elapsed="2.303143"/>
+</kw>
+<tag>High,Search</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-05-16T11:00:30.674002" elapsed="10.659066"/>
+</test>
+<test id="s1-s2-t8" name="Verify that the user's search will fail with whitespace characters when the user is logged into the system" line="53">
+<kw name="Access to ${URL_LOGIN}" owner="base_page" source_name="Access to ${URL}">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:41.341215" level="INFO">Opening browser 'chrome' to base url 'https://bearstore-testsite.smartbear.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-16T11:00:41.340219" elapsed="8.964007"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-16T11:00:50.304226" elapsed="0.084916"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:41.339223" elapsed="9.049919"/>
+</kw>
+<kw name="Input username" owner="login_page">
+<kw name="Input ${TEXT} For ${USERNAME_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:50.395125" elapsed="0.120676"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:50.515801" elapsed="0.056848"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:50.572649" level="INFO">Typing text '@trantruc2001' into text field 'css:#UsernameOrEmail'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:50.572649" elapsed="0.108346"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:50.394130" elapsed="0.287860"/>
+</kw>
+<arg>${USER_NAME_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T11:00:50.393129" elapsed="0.288861"/>
+</kw>
+<kw name="Input pass" owner="login_page">
+<kw name="Input ${TEXT} For ${PASSWORD_ELE}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:50.683018" elapsed="0.033880"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:50.716898" elapsed="0.044879"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:50.762776" level="INFO">Typing text 'TranPhuongNgocTruc20042001' into text field 'css:#Password'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:50.762776" elapsed="0.106456"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:50.683018" elapsed="0.186214"/>
+</kw>
+<arg>${PASS_RIGHT}</arg>
+<status status="PASS" start="2024-05-16T11:00:50.681990" elapsed="0.187242"/>
+</kw>
+<kw name="Click log in button" owner="login_page">
+<kw name="Click on ${LOGIN_BTN_ELE} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:50.870193" elapsed="0.019946"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T11:00:50.890139" elapsed="0.020968"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:50.912104" level="INFO">Clicking element 'css:.btn-login'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:50.912104" elapsed="2.164817"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T11:00:50.870193" elapsed="2.206728"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:50.870193" elapsed="2.206728"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:50.870193" elapsed="2.206728"/>
+</kw>
+<kw name="Search with the ${Empty}" owner="search.pageobject" source_name="Search with the ${CONTENT}">
+<kw name="Input ${CONTENT} For ${INPUT_SEARCH}" owner="base_page" source_name="Input ${TEXT} For ${LOCATOR}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:53.079945" elapsed="0.037599"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:53.118542" elapsed="0.047684"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:53.166226" level="INFO">Typing text '\' into text field 'css:.instasearch-term'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:53.166226" elapsed="0.078570"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:53.079945" elapsed="0.164851"/>
+</kw>
+<kw name="Click on ${SEARCH_BTN} button" owner="base_page" source_name="Click on ${LOCATOR} button">
+<kw name="Click on the web element" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:53.245801" elapsed="0.041881"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-16T11:00:53.288680" elapsed="0.036901"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:53.328587" level="INFO">Clicking element 'css:.instasearch-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T11:00:53.326588" elapsed="1.201980"/>
+</kw>
+<arg>${LOCATOR}</arg>
+<status status="PASS" start="2024-05-16T11:00:53.245801" elapsed="1.282767"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:53.245801" elapsed="1.282767"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:53.078915" elapsed="1.449653"/>
+</kw>
+<kw name="Verify users search fail when data is whitespace" owner="search.pageobject">
+<kw name="Verify a case" owner="base_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-16T11:00:54.532564" elapsed="0.039885"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-16T11:00:54.590401" level="INFO">Current page contains text 'The minimum length for the search term is 2 characters.'.</msg>
+<arg>${TEXT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-16T11:00:54.572449" elapsed="0.017952"/>
+</kw>
+<arg>${DANGER_TITLE}</arg>
+<arg>${DANGER_TITLE_ELE}</arg>
+<status status="PASS" start="2024-05-16T11:00:54.532564" elapsed="0.057837"/>
+</kw>
+<status status="PASS" start="2024-05-16T11:00:54.530569" elapsed="0.059832"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-16T11:00:54.591400" elapsed="2.308167"/>
+</kw>
+<tag>High,Search</tag>
+<status status="PASS" start="2024-05-16T11:00:41.337188" elapsed="15.564381"/>
+</test>
+<status status="PASS" start="2024-05-16T10:59:24.978326" elapsed="91.926667"/>
+</suite>
+<status status="PASS" start="2024-05-16T10:58:31.339495" elapsed="145.571310"/>
 </suite>
 <statistics>
 <total>
-<stat pass="8" fail="0" skip="0">All Tests</stat>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="8" fail="0" skip="0">High</stat>
-<stat pass="8" fail="0" skip="0">Search</stat>
-<stat pass="6" fail="0" skip="0">Smoke</stat>
+<stat pass="12" fail="0" skip="0">High,Search</stat>
+<stat pass="9" fail="0" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="8" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="8" fail="0" skip="0" id="s1-s1" name="Search Suite">Tests.Search Suite</stat>
+<stat pass="12" fail="0" skip="0" id="s1" name="searchUser suite &amp; Search Suite">searchUser suite &amp; Search Suite</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="searchUser suite">searchUser suite &amp; Search Suite.searchUser suite</stat>
+<stat pass="8" fail="0" skip="0" id="s1-s2" name="Search Suite">searchUser suite &amp; Search Suite.Search Suite</stat>
 </suite>
 </statistics>
 <errors>

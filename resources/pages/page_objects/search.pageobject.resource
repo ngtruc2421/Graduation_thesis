@@ -12,8 +12,9 @@ ${DANGER_TITLE}    The minimum length for the search term is 2 characters.
 ${DANGER_TITLE_ELE}    css:.alert-danger
 ${Empty}    \\             
 *** Keywords ***
-Search with the ${CONTENT}
-    Input ${CONTENT} For ${INPUT_SEARCH}
+Search with the content
+    [Arguments]    ${CONTENT}
+    Input content    ${CONTENT}    ${INPUT_SEARCH}
     Click on ${SEARCH_BTN} button
 Display the warning message
     [Arguments]    ${TEXT}    ${LOCATOR}

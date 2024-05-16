@@ -14,12 +14,24 @@ Click on the web element
     Click Element    ${locator}
 Click on ${LOCATOR} button
     Click on the web element    ${LOCATOR}
-Input ${TEXT} For ${LOCATOR}
+Input content 
+    [Arguments]    ${TEXT}    ${LOCATOR}    
     Wait Until Element Is Visible    ${LOCATOR}      
     Clear Element Text    ${LOCATOR}
     Input Text    ${LOCATOR}    ${TEXT}
 
-Verify a case
+Display the message
     [Arguments]    ${TEXT}    ${LOCATOR}
     Wait Until Element Is Visible    ${LOCATOR}
     Page Should Contain    ${TEXT}
+# Log error if keyword fail
+#     [Arguments]    ${KEY}    @{VALUE}
+#     ${results}    Run Keyword And Ignore Error    ${KEY}    ${VALUE}
+#     Run Keyword If    '${results[0]}' != 'PASS'    Log    ${results[1]}    ERROR
+#     RETURN    ${results}
+Turn off log
+    [Arguments]    ${Keyword}    ${Values}
+    Set Log Level    NONE
+    ${Results}    Run Keyword    ${Keyword}    ${Values}
+    Set Log Level    INFO
+    RETURN    ${Results}

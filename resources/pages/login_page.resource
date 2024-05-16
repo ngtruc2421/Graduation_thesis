@@ -18,21 +18,19 @@ ${USER_NAME_WRONG}=    @trantruc
 *** Keywords ***
 Input username
     [Arguments]    ${TEXT}
-    Input ${TEXT} For ${USERNAME_ELE}
+    Input content    ${TEXT}    ${USERNAME_ELE}
 Input pass
     [Arguments]    ${TEXT}
-    Input ${TEXT} For ${PASSWORD_ELE}    
+    Input content    ${TEXT}    ${PASSWORD_ELE}    
 
 Click the Login button
     Click on ${LOGIN_BTN_ELE} button
 
 Display the success title on the login page
-    Wait Until Element Is Visible    ${MESS_SUCCESS_ELE}
-    Page Should Contain    ${MESS_SUCCESS}
+    Display the message    ${MESS_SUCCESS}    ${MESS_SUCCESS_ELE}
 
 Display the fail title on the login page
-    Wait Until Element Is Visible    ${MESS_FAIL_ELE}
-    Page Should Contain    ${MESS_FAIL}
+    Display the message    ${MESS_FAIL}    ${MESS_FAIL_ELE}
 
 Login with ${NAME} and ${PASS}
     Input username    ${NAME}

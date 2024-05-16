@@ -7,22 +7,24 @@ Test Teardown     Close Browser
 Verify that user can search the content with lowercase characters when user is not logged into the system
     [Tags]    Smoke
     Access to ${URL_BASE}
-    Search with the ball
-    Verify that user search success
+    Search with the content     ball
+    Display the success message    ${SUCCESS_TITLE}    ${SUCCESS_TITLE_ELE}
+
 Verify that user can search the content with uppercase characters when user is not logged into the system
     [Tags]    Smoke
     Access to ${URL_BASE}
-    Search with the BALL
-    Verify that user search success
+    Search with the content     BALL
+    Display the success message    ${SUCCESS_TITLE}    ${SUCCESS_TITLE_ELE}
+
 Verify that the user's search will fail with special characters when the user is not logged into the system
     [Tags]    Smoke
     Access to ${URL_BASE}
-    Search with the #@!
-    Verify that user search fail when it did not match any products
+    Search with the content    "#@!"
+    Display the warning message    ${ALERT_TITLE}    ${ALERT_TITLE_ELE}
 Verify that the user's search will fail with whitespace characters when the user is not logged into the system
     Access to ${URL_BASE}
     Search with the ${Empty}
-    Verify users search fail when data is whitespace
+    Display the warning message    ${DANGER_TITLE}    ${DANGER_TITLE_ELE}
 
 #### LOGGED IN ####
 Verify that user can search the content with lowercase characters when user is logged into the system
@@ -30,29 +32,31 @@ Verify that user can search the content with lowercase characters when user is l
     Access to ${URL_LOGIN}
     Input username    ${USER_NAME_RIGHT}
     Input pass        ${PASS_RIGHT}
-    Click log in button
-    Search with the ball
-    Verify that user search success
+    Click The Login button
+    Search with the content     ball
+    Display the success message    ${SUCCESS_TITLE}    ${SUCCESS_TITLE_ELE}
+
 Verify that user can search the content with uppercase characters when user is logged into the system
     [Tags]    Smoke
     Access to ${URL_LOGIN}
     Input username    ${USER_NAME_RIGHT}
     Input pass        ${PASS_RIGHT}
-    Click log in button
-    Search with the BALL
-    Verify that user search success
+    Click The Login button
+    Search with the content     BALL
+    Display the success message    ${SUCCESS_TITLE}    ${SUCCESS_TITLE_ELE}
+
 Verify that the user's search will fail with special characters when the user is logged into the system
     [Tags]    Smoke
     Access to ${URL_LOGIN}
     Input username    ${USER_NAME_RIGHT}
     Input pass        ${PASS_RIGHT}
-    Click log in button
-    Search with the #@!
-    Verify that user search fail when it did not match any products
+    Click The Login button
+    Search with the content     "#@!"
+    Display the warning message    ${ALERT_TITLE}    ${ALERT_TITLE_ELE}
 Verify that the user's search will fail with whitespace characters when the user is logged into the system
     Access to ${URL_LOGIN}
     Input username    ${USER_NAME_RIGHT}
     Input pass        ${PASS_RIGHT}
-    Click log in button
+    Click The Login button
     Search with the ${Empty}
-    Verify users search fail when data is whitespace
+    Display the warning message    ${DANGER_TITLE}    ${DANGER_TITLE_ELE}
